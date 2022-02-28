@@ -42,10 +42,17 @@ class ConversionCell: UITableViewCell {
         self.typeIcon.backgroundColor = trans.color
         self.typeIcon.setImage(trans.icon, for: .normal)
         
+        let storage = BalanceStorage.shared
         if trans == .sell {
+            self.updateButtonState(code: storage.source)
+            self.amountField.text = "\(storage.getBalance(forKey: storage.source))"
             self.amountField.isEnabled = true
         } else {
+            let destination = BalanceStorage.shared.destination
+            self.updateButtonState(code: destination)
             self.amountField.isEnabled = false
+            
+            //TODO: API call to get the conversion rate
         }
     }
     

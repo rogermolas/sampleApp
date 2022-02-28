@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		10DC10D82A98055FE1D485BB /* Pods_Converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539E75913ED685ADEC99DA8 /* Pods_Converter.framework */; };
+		A50FF3B727CC97FA003522C4 /* BalanceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FF3B627CC97FA003522C4 /* BalanceItem.swift */; };
+		A50FF3B927CC9824003522C4 /* BalanceItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50FF3B827CC9824003522C4 /* BalanceItem.xib */; };
+		A50FF3BC27CCA3FB003522C4 /* BalanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FF3BB27CCA3FB003522C4 /* BalanceStorage.swift */; };
+		A50FF3BE27CCA959003522C4 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FF3BD27CCA959003522C4 /* Formatter.swift */; };
 		A53E930D27CA19F500D4DE3C /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E930C27CA19F500D4DE3C /* ResultModel.swift */; };
 		A53E931127CA1AE100D4DE3C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E931027CA1AE100D4DE3C /* GradientButton.swift */; };
 		A53E931327CA1F5D00D4DE3C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E931227CA1F5D00D4DE3C /* Currency.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A50FF3B627CC97FA003522C4 /* BalanceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItem.swift; sourceTree = "<group>"; };
+		A50FF3B827CC9824003522C4 /* BalanceItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceItem.xib; sourceTree = "<group>"; };
+		A50FF3BB27CCA3FB003522C4 /* BalanceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceStorage.swift; sourceTree = "<group>"; };
+		A50FF3BD27CCA959003522C4 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		A53E930C27CA19F500D4DE3C /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		A53E931027CA1AE100D4DE3C /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		A53E931227CA1F5D00D4DE3C /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -64,10 +72,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A50FF3BA27CCA3C4003522C4 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A50FF3BB27CCA3FB003522C4 /* BalanceStorage.swift */,
+				A50FF3BD27CCA959003522C4 /* Formatter.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		A53E930A27CA072500D4DE3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				A5FC9B7D27C9C3EE00A60226 /* Main.storyboard */,
+				A50FF3B827CC9824003522C4 /* BalanceItem.xib */,
 				A5FC9B8027C9C3F000A60226 /* Assets.xcassets */,
 				A5FC9B8227C9C3F000A60226 /* LaunchScreen.storyboard */,
 				A5FC9B8527C9C3F000A60226 /* Info.plist */,
@@ -127,6 +145,7 @@
 				A53E930B27CA19E500D4DE3C /* Model */,
 				A53E930E27CA1A2E00D4DE3C /* View */,
 				A5FC9B9327C9D0B700A60226 /* Enums */,
+				A50FF3BA27CCA3C4003522C4 /* System */,
 				A53E930A27CA072500D4DE3C /* Resources */,
 			);
 			path = Converter;
@@ -147,6 +166,7 @@
 			children = (
 				A5FC9B8B27C9CAEC00A60226 /* BalanceCell.swift */,
 				A5FC9B8D27C9CB2100A60226 /* ConversionCell.swift */,
+				A50FF3B627CC97FA003522C4 /* BalanceItem.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -221,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FC9B8427C9C3F000A60226 /* LaunchScreen.storyboard in Resources */,
+				A50FF3B927CC9824003522C4 /* BalanceItem.xib in Resources */,
 				A5FC9B8127C9C3F000A60226 /* Assets.xcassets in Resources */,
 				A5FC9B7F27C9C3EE00A60226 /* Main.storyboard in Resources */,
 			);
@@ -275,11 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50FF3B727CC97FA003522C4 /* BalanceItem.swift in Sources */,
+				A50FF3BE27CCA959003522C4 /* Formatter.swift in Sources */,
 				A5FC9B7C27C9C3EE00A60226 /* ViewController.swift in Sources */,
 				A5FC9B9227C9D0B000A60226 /* Sections.swift in Sources */,
 				A5FC9B7827C9C3EE00A60226 /* AppDelegate.swift in Sources */,
 				A5FC9B9027C9CC0C00A60226 /* Transaction.swift in Sources */,
 				A53E931127CA1AE100D4DE3C /* GradientButton.swift in Sources */,
+				A50FF3BC27CCA3FB003522C4 /* BalanceStorage.swift in Sources */,
 				A53E930D27CA19F500D4DE3C /* ResultModel.swift in Sources */,
 				A53E931327CA1F5D00D4DE3C /* Currency.swift in Sources */,
 				A5FC9B8C27C9CAEC00A60226 /* BalanceCell.swift in Sources */,

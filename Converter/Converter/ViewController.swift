@@ -89,9 +89,13 @@ extension ViewController: ConversionCellDelegate {
     func didChangeCurrency(cell: ConversionCell, trans: Transaction, code: String) {
         if trans == .sell {
             source = code
+            BalanceStorage.shared.source = code
+            tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .none)
         }
         if trans == .sell {
             destination = code
+            BalanceStorage.shared.destination = code
+            tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .none)
         }
     }
 }
