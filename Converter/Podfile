@@ -9,5 +9,6 @@ target 'Converter' do
   pod 'RMHttp'
   pod 'MBProgressHUD'
   pod 'ActionSheetPicker-3.0'
+  pod 'CurrencyText'
 
 end

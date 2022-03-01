@@ -1,24 +1,37 @@
 PODS:
   - ActionSheetPicker-3.0 (2.7.1)
+  - CurrencyText (2.2.0):
+    - CurrencyText/CurrencyFormatter (= 2.2.0)
+    - CurrencyText/CurrencyTextField (= 2.2.0)
+    - CurrencyText/CurrencyUITextField (= 2.2.0)
+  - CurrencyText/CurrencyFormatter (2.2.0)
+  - CurrencyText/CurrencyTextField (2.2.0):
+    - CurrencyText/CurrencyFormatter
+    - CurrencyText/CurrencyUITextField
+  - CurrencyText/CurrencyUITextField (2.2.0):
+    - CurrencyText/CurrencyFormatter
   - MBProgressHUD (1.2.0)
   - RMHttp (1.6.1)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
+  - CurrencyText
   - MBProgressHUD
   - RMHttp
 
 SPEC REPOS:
   trunk:
     - ActionSheetPicker-3.0
+    - CurrencyText
     - MBProgressHUD
     - RMHttp
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
+  CurrencyText: d6044473043b17e67baeeb35745dc265c026dda0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   RMHttp: b7cb8f93d979a2a9404c43ca9018ced34dcf4951
 
-PODFILE CHECKSUM: 6d47efa07204054a2990d40436d5a82f639672c6
+PODFILE CHECKSUM: 82d8c9ef834e64efb5bf3c35bf24a7613c4209d6
 
 COCOAPODS: 1.11.2

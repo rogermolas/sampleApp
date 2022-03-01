@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
+        self.tableView.addGestureRecognizer(tap)
+        self.view.addGestureRecognizer(tap)
+        tableView.keyboardDismissMode = .interactive
+        tableView.keyboardDismissMode = .onDrag
 
         // Navbar
         self.title = "Currency Converter"
@@ -56,7 +61,14 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Action
+    
+    @objc func dismissKeyBoard() {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func onSubmit(sender: UIButton) {
+        self.dismissKeyBoard()
+
         if BalanceStorage.shared.getBalance(forKey: source) <= 0 {
             let message = "Does not have enough \(source) balance to cover transactions."
             UIAlertController.init(title: "Insufficient fund", message: message, onDone: nil)

@@ -7,161 +7,205 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0091E4134A0D7F54CCE654E1EFB490BE /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 81893069A0DB7F9B3BA4E8FECAA07641 /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0097064E7F7D3F413161738CC5C25EEC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D531BDA111DDC833C9FCDFFB1BB70F8 /* MBProgressHUD.m */; };
+		0091E4134A0D7F54CCE654E1EFB490BE /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BFC9BCC0846365DDEA49B8D47559E62 /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0097064E7F7D3F413161738CC5C25EEC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EB322021BC5917F0E4F04F677E6C47 /* MBProgressHUD.m */; };
 		0AA33EBB857A5205F87C09CCB99EAC74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		0FC023279EE129DB7826EC92B6810C8D /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF9E7191745614E3211027DA30AB2F2 /* ActionSheetPicker-3.0-dummy.m */; };
-		12FA8AB2ACBB820E7EC413726F9D56BC /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D841B7FE0D55CA40EE9623202142BB /* AbstractActionSheetPicker.m */; };
+		0AEDAEC7DACE0E5E538701B83BC550DF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15A8C4BC423067D20BFF14E095057D /* Currency.swift */; };
+		0FC023279EE129DB7826EC92B6810C8D /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CAB21485FCEF0473AFEFBBB568C9B /* ActionSheetPicker-3.0-dummy.m */; };
+		12FA8AB2ACBB820E7EC413726F9D56BC /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977365AE49EF86E0E2F83A5667B16DA /* AbstractActionSheetPicker.m */; };
+		152E2BD0549BAAB6008334E49FAECD5F /* Pods-Converter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2330E82B5B8DE0D7287B652F1B59BB5 /* Pods-Converter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		174418DAF9D7E2848311D73EDFD39797 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		19767DBA2980A1DF8DD78E2CC681C627 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E341D3F75D6BBBF710DCC5B32ED9EA /* ActionSheetStringPicker.m */; };
-		251EC47F6D3F0F534B076FA11DAA3591 /* RMHttp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C8C3D0FCF2900F21342E1ED5682BBB7 /* RMHttp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30B9706BE643B5F0A0530D55403692A2 /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C044BD41018FB7DE865BB2CEFA550412 /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3228EF9BB4197B00304ACEBEC57BDA5E /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D45034274C51144ACFB6493EA911D6D1 /* SWActionSheet.m */; };
-		3E20ACBD443C2D7BBF17DBE83CBC521F /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 71D6F82BF40422519B555B7B575D3F29 /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FB00B6187FADACF9F2E2463C6CB37D3 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C986AF2FB83A278044C62E9F547B01C /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4007288570A129B4E922875A51663243 /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = B03657E36D31C7D34D06BAC549FEE853 /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B79BC2FA4707C00C600F65B3FA807F7 /* RMBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF77FBF90117A7229E1510718B7EFD2 /* RMBuilder.swift */; };
+		181D21009B5EC448C44C4EEF34B90069 /* Fixtures+CurrencyTextFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02785F77EC9DBB96CE16B2141F7E60B2 /* Fixtures+CurrencyTextFieldConfiguration.swift */; };
+		19767DBA2980A1DF8DD78E2CC681C627 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7144713F00D8057EC1ECADD384398504 /* ActionSheetStringPicker.m */; };
+		210CEC562627BBA9E862CCFB72711BB3 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847FF47AF3BC88DAD85CB4562FC9187 /* CurrencyFormatter.swift */; };
+		23031A84102CC1D9770C683AF4FE5465 /* Pods-Converter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 595CE81E81FC07FC9631DD1E7FCB6E94 /* Pods-Converter-dummy.m */; };
+		251EC47F6D3F0F534B076FA11DAA3591 /* RMHttp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB89A508B75AFF5279FDC91844A7EC5C /* RMHttp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B9706BE643B5F0A0530D55403692A2 /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB83202F81057B9F1543D13612D57136 /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3228EF9BB4197B00304ACEBEC57BDA5E /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = AC058CEDFD3B671F8E8776A79AA83A27 /* SWActionSheet.m */; };
+		349F02BFC0FE39CAB3F7C238667F5A62 /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54937468CB29541A6F5384C91B4B6BB3 /* OptionalBinding.swift */; };
+		3E20ACBD443C2D7BBF17DBE83CBC521F /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE372DDD04C22E07A829F811F37A9BE /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FB00B6187FADACF9F2E2463C6CB37D3 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E5865412B7BCF07BC4D79E5054E186E8 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4007288570A129B4E922875A51663243 /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = FE86432990C0A37F8E38271E04FA166E /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41FABB33B9D74D7AEB70FBD9282878A6 /* Fixtures+CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B25F656C40467CB3FF6D3949F2B69 /* Fixtures+CurrencyFormatter.swift */; };
+		4B79BC2FA4707C00C600F65B3FA807F7 /* RMBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37218E6BA1F590BBDB2EF2F431CE315 /* RMBuilder.swift */; };
 		4BBDAE80B2577F2F7312A6EC1FA23A30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		4F00428D553C1A5167509952131C81D3 /* Pods-Converter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2330E82B5B8DE0D7287B652F1B59BB5 /* Pods-Converter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50EDFC88D8E5515FEA35B2CD43715CAA /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C12D4DDC435C7E2AD1DB58F0E980FF68 /* ActionSheetDatePicker.m */; };
+		4D2D8EF2E23C45CFC2786D337308C56B /* CurrencyTextFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15246303624A3DB7E6BA139A69CE9A95 /* CurrencyTextFieldConfiguration.swift */; };
+		50EDFC88D8E5515FEA35B2CD43715CAA /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 772311E1D1499BAEFE841C930C3DABC5 /* ActionSheetDatePicker.m */; };
 		558986D0D52FC340DE534D4F38CA8D3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
-		58C91B4AB36E6B16421106CA634C58EF /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDB45894597FA77C404495C0CE259 /* MBProgressHUD-dummy.m */; };
-		5BAC1EF86D0E57E44E404B2796993561 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6540626A560A1C3BBB6A6D304E7F0BC6 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5ED8F5A7087CB6ABC1D1261752BA4D77 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 263FDAAC399745E8498C1526F17B7389 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67E941CADB3CDDEEDF8CE4EE4A4A05BB /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C3C7C4CF560DB697E11A46301AB22D /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AE7C13634E07A7D4DAD613EA245A470 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA5EB75347719A429051C4D108058B4 /* ActionSheetDistancePicker.m */; };
-		6C772919917A5580DF667180240E0C98 /* RMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03589A0F9DC11646E044309B90E6C3 /* RMError.swift */; };
-		77D19C03E758B37FF86FEB9B6B3B565E /* RMRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3239767FDE3F7456456F05A94B19259 /* RMRequestManager.swift */; };
-		8B7460103CE0A4A207B630EFDC9A88FB /* Pods-Converter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 595CE81E81FC07FC9631DD1E7FCB6E94 /* Pods-Converter-dummy.m */; };
-		90B5AB0FD96E1CC67C638AA03BB83DB0 /* RMParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763239C2C7C7165ACBAA3D16EBC94259 /* RMParser.swift */; };
-		9D59535CF4F4C867E488363A17D18809 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BD743B31C4988CF636114069221C19FA /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2A4B9698B2D4AFF38D5184BE0CA9C3D /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F28D73F19F749C0CA2C9244C62E37BCD /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4925D8CA9DBA80C5A48A4A2BBE2FDA6 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A3B1B1AD8A6FA70CECDC23C3ED363 /* RMRequest.swift */; };
+		58C91B4AB36E6B16421106CA634C58EF /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CBE9B7EB80F219665DA00C7AA1925 /* MBProgressHUD-dummy.m */; };
+		5AF440BA4E270DE3BD33032E5D6B0F38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		5BAC1EF86D0E57E44E404B2796993561 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E03BE88FA1253FC4FFCC7B4FEAF6889 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5ED8F5A7087CB6ABC1D1261752BA4D77 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2F69C1AAB2B46B29269E8ABD01CE10 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67E941CADB3CDDEEDF8CE4EE4A4A05BB /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = D641A0779163563BC34D0B73F347BE81 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AE7C13634E07A7D4DAD613EA245A470 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A006EB44028037AA200C24A900CC264B /* ActionSheetDistancePicker.m */; };
+		6C772919917A5580DF667180240E0C98 /* RMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909E6C6EC809FCD1FD6273384EECFDD /* RMError.swift */; };
+		721074F2A5CE66EC5C594248E82278BC /* CurrencyUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4330B89AD4E4F2B94256DB9247B40958 /* CurrencyUITextFieldDelegate.swift */; };
+		7430D4F7A339B76985A70E606DFB7ADB /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C43FB59A76D1CF5B508D7B815B0D3 /* String.swift */; };
+		77D19C03E758B37FF86FEB9B6B3B565E /* RMRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1502739300876A4BAE514F165A389E0C /* RMRequestManager.swift */; };
+		7C151C3AD26880D0103DA7F868106AAF /* CurrencyText-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5ACBD7F1D1DD33402EAF3B11378A07A /* CurrencyText-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83AE37972ECFD2F04632819425C49A43 /* CurrencyText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CFD6EE73B2952916EB1989656B3259 /* CurrencyText-dummy.m */; };
+		8DDDB3A1005DF14464176F945641281A /* WrappedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D045CBCEA232FD6EC3E99616818B12A /* WrappedTextField.swift */; };
+		90B5AB0FD96E1CC67C638AA03BB83DB0 /* RMParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E95F1435A9CD940D006ED051F44D4A /* RMParser.swift */; };
+		9D59535CF4F4C867E488363A17D18809 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = C2273FF10F409EF10F8254251B9CF085 /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2A4B9698B2D4AFF38D5184BE0CA9C3D /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2ACF12A20720D0C4EC879909433CC3 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43DDE6F0F2E5F8BBBEFA3F5E60EA4E6 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE66CD8738080D162A8BB7F9C742B6B7 /* UITextField.swift */; };
+		A4925D8CA9DBA80C5A48A4A2BBE2FDA6 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424376522E4B74DAAE677FBBFBCD9011 /* RMRequest.swift */; };
+		AB8E235701063C07D8E49606A6149A38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		ACD6FE10F80B04CF3E13D9E9E9FB48AC /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EBE5A43A33211326FD3A10089C341 /* CurrencyTextField.swift */; };
 		AFAC1D4EBD53A048346210536741DF13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
-		B3556BB6B3BE4910C609C54B2FAC9772 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D83047E2EAA417A89E80648F26C2DC42 /* ActionSheetCustomPicker.m */; };
-		B456B48893DFFF7AE3ACFBDBB29537AF /* RMParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3805B7AB01B159E9A07BFA7012DBD3 /* RMParams.swift */; };
+		B3556BB6B3BE4910C609C54B2FAC9772 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 50200D0F202F3754BFB999E10E9F73DA /* ActionSheetCustomPicker.m */; };
+		B456B48893DFFF7AE3ACFBDBB29537AF /* RMParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CB1D60D748A4190C437D011422F5E3 /* RMParams.swift */; };
 		B52177FF72FDAC3EDB7195DE98F5501E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
-		B779C5D0133D2074CB2EDAC61C4C5475 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A4807E83D470F239F75DF137EBFFB44 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBF5FDE30E2EF4FB378A79D0FA8B388A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		BC4B6F64F4CB5EA722D1A601DCA9A763 /* RMCommons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AECF665A2FC3AE17013E536D7F58FF /* RMCommons.swift */; };
-		BC92DAA5EA59849601A1080AA7671D4E /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D542B9DFAB0DEF79CA7AF343DD5312E /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5586F7E1FA203CD09DD3244ADEBED7C /* RMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E492323B2CBE9EBF5E91F0DD328DE /* RMTime.swift */; };
-		C6C37BF9D34EAEF311626B84867FE489 /* RMFormDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867D68213D9C177C8AD5ADAB7085EE8 /* RMFormDataFile.swift */; };
-		CD151B24C25809170DECD96AA3F2989E /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC68C966C665446D885113345DA0AC2 /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D83CA018CE47EFACCE999FEDA386F53E /* RMHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F6048D51D7243B1DEB51F8390AAAA3 /* RMHttp.swift */; };
-		DC2C88E51CAEEEDC1DA6147971764C60 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C585E7A6BE7167F233F92C5C9F313038 /* DistancePickerView.m */; };
-		E9F102B3D30E53FA0000004646C7E932 /* RMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C27CD012EE14959C365114527AA597 /* RMResponse.swift */; };
-		EE783D3B9E15DFFD23C61D2C552B49EA /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD1BC4FA9C7BB164F21103D95F71774 /* ActionSheetLocalePicker.m */; };
-		EEC7477ABC2DC5D98E61613141784919 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 791EC98BB6B002605BC2BD0F949C4F51 /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4D2ADA7E1DAB3AB844FCF231E0D72E5 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F2C3588642B2899C5539B2A9862663 /* ActionSheetMultipleStringPicker.m */; };
-		F71CCB14CDB0BDC0714B040A031C22F4 /* RMHttp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D1E5F7169D5E7E3EB62EB203FC44F0 /* RMHttp-dummy.m */; };
+		B779C5D0133D2074CB2EDAC61C4C5475 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = C1629D3C0173C22119DA1C3416D3124B /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9A4672DFA2635A51C5B402E1116064E /* CurrencyLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257D1631883D1DC3BE03ECD451389BF /* CurrencyLocale.swift */; };
+		BC4B6F64F4CB5EA722D1A601DCA9A763 /* RMCommons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654DA422AEB03C190D56B18435738D90 /* RMCommons.swift */; };
+		BC92DAA5EA59849601A1080AA7671D4E /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 752418F47640E22E59D81B37B2AA42AB /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C34BE23EE02F1E434CCDF21AF3E453B6 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ED321E2BD8F1C4977FFACB3AE27D9D /* NumberFormatter.swift */; };
+		C5586F7E1FA203CD09DD3244ADEBED7C /* RMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8B39B6E51EBC83435958CE7D54BD3 /* RMTime.swift */; };
+		C6C37BF9D34EAEF311626B84867FE489 /* RMFormDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA1C34A5361C82605E06DA8E2267CF /* RMFormDataFile.swift */; };
+		CD151B24C25809170DECD96AA3F2989E /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C23050C53E51A76B0774CC95B0A28E /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D83CA018CE47EFACCE999FEDA386F53E /* RMHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F4DAE1D99F9CBB83DFF7D4058F381 /* RMHttp.swift */; };
+		DC2C88E51CAEEEDC1DA6147971764C60 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DAF3390D175306A83762C755A7FCB /* DistancePickerView.m */; };
+		E9F102B3D30E53FA0000004646C7E932 /* RMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9381366278E09FA6D364C141D1FA2A12 /* RMResponse.swift */; };
+		EE783D3B9E15DFFD23C61D2C552B49EA /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 27218F5A003DD165715FB73C183AE1C8 /* ActionSheetLocalePicker.m */; };
+		EEC7477ABC2DC5D98E61613141784919 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = A08FD345E17D868568D81275FCDD591C /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4D2ADA7E1DAB3AB844FCF231E0D72E5 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9BE72AA77F1099ACD2EE41DBB684E9 /* ActionSheetMultipleStringPicker.m */; };
+		F71CCB14CDB0BDC0714B040A031C22F4 /* RMHttp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5BDEFAD7E50816377A610335B5BEA1 /* RMHttp-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3E6E039FBBCDEFEEEBCF1BBDD71C6F21 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
-			remoteInfo = MBProgressHUD;
-		};
-		6E6A1EDB3F986D0B7150E9544EE50DCF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 37A7BB0DDE1D2D4233517EA6AE230718;
-			remoteInfo = RMHttp;
-		};
-		F8560E13DB9EC3CA6270B4559616DC7A /* PBXContainerItemProxy */ = {
+		23035090D83BC616B6198AC597FBD025 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A43B25DDF20FCB9228471F8F5135C866;
 			remoteInfo = "ActionSheetPicker-3.0";
 		};
+		31A987156AA3F91F52B96176E21E6FC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4269AD921DFF5B86E3B350C710067618;
+			remoteInfo = CurrencyText;
+		};
+		582F637050C86AB39AC1089E16D19BFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A7BB0DDE1D2D4233517EA6AE230718;
+			remoteInfo = RMHttp;
+		};
+		F60FEFC67AEDD8BC75416138D93253DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
+			remoteInfo = MBProgressHUD;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02785F77EC9DBB96CE16B2141F7E60B2 /* Fixtures+CurrencyTextFieldConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Fixtures+CurrencyTextFieldConfiguration.swift"; path = "Sources/CurrencyTextFieldTestSupport/Fixtures/Fixtures+CurrencyTextFieldConfiguration.swift"; sourceTree = "<group>"; };
 		04D60AC13D33197690A05C641925DDDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		109660D5910DC5023F46B078ADDCB026 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		0B5BDEFAD7E50816377A610335B5BEA1 /* RMHttp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RMHttp-dummy.m"; sourceTree = "<group>"; };
+		0DE921A800C91A6063B7154433C8CBA1 /* RMHttp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RMHttp.debug.xcconfig; sourceTree = "<group>"; };
+		1502739300876A4BAE514F165A389E0C /* RMRequestManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMRequestManager.swift; path = RMHttp/Classes/RMRequestManager.swift; sourceTree = "<group>"; };
+		15246303624A3DB7E6BA139A69CE9A95 /* CurrencyTextFieldConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrencyTextFieldConfiguration.swift; path = Sources/SwiftUI/CurrencyTextFieldConfiguration.swift; sourceTree = "<group>"; };
 		161EB2C3085623B4DB97D6C24726DE1B /* Pods-Converter-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Converter-frameworks.sh"; sourceTree = "<group>"; };
-		23DB1E983140603CEDC35A018FEB9F4E /* ActionSheetPicker-3.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.release.xcconfig"; sourceTree = "<group>"; };
-		263FDAAC399745E8498C1526F17B7389 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
-		33C3C7C4CF560DB697E11A46301AB22D /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1AE372DDD04C22E07A829F811F37A9BE /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		27218F5A003DD165715FB73C183AE1C8 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		28026DCDC319C78EC21752E0FE236762 /* CurrencyText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CurrencyText.release.xcconfig; sourceTree = "<group>"; };
+		2A9BE72AA77F1099ACD2EE41DBB684E9 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		2D045CBCEA232FD6EC3E99616818B12A /* WrappedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WrappedTextField.swift; path = Sources/SwiftUI/WrappedTextField.swift; sourceTree = "<group>"; };
+		2E2F69C1AAB2B46B29269E8ABD01CE10 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		30E95F1435A9CD940D006ED051F44D4A /* RMParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMParser.swift; path = RMHttp/Classes/RMParser.swift; sourceTree = "<group>"; };
+		35CFD6EE73B2952916EB1989656B3259 /* CurrencyText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CurrencyText-dummy.m"; sourceTree = "<group>"; };
+		35F8B39B6E51EBC83435958CE7D54BD3 /* RMTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMTime.swift; path = RMHttp/Classes/RMTime.swift; sourceTree = "<group>"; };
 		370F808552732E00E6DA554D8E445140 /* Pods-Converter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Converter-Info.plist"; sourceTree = "<group>"; };
-		3B0749CE823CFAC093DFA340499E73FB /* RMHttp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RMHttp.modulemap; sourceTree = "<group>"; };
-		4B1FF9D21B083F8B75B02D4B4D9D8E91 /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
-		4D542B9DFAB0DEF79CA7AF343DD5312E /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		3D034D4CC0350020EB49DDDD97BB60B1 /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		3E1C49DB9BAC61D94D383E5D543C2F7B /* CurrencyText.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CurrencyText.modulemap; sourceTree = "<group>"; };
+		3F5B25F656C40467CB3FF6D3949F2B69 /* Fixtures+CurrencyFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Fixtures+CurrencyFormatter.swift"; path = "Sources/CurrencyTextFieldTestSupport/Fixtures/Fixtures+CurrencyFormatter.swift"; sourceTree = "<group>"; };
+		3FAE43C222569652543ECCE646F6F8A0 /* MBProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		424376522E4B74DAAE677FBBFBCD9011 /* RMRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMRequest.swift; path = RMHttp/Classes/RMRequest.swift; sourceTree = "<group>"; };
+		4330B89AD4E4F2B94256DB9247B40958 /* CurrencyUITextFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrencyUITextFieldDelegate.swift; path = Sources/UITextFieldDelegate/CurrencyUITextFieldDelegate.swift; sourceTree = "<group>"; };
+		45591B5F01E1568690443A63769409B1 /* RMHttp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RMHttp.release.xcconfig; sourceTree = "<group>"; };
+		49ED321E2BD8F1C4977FFACB3AE27D9D /* NumberFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NumberFormatter.swift; path = Sources/Formatter/NumberFormatter.swift; sourceTree = "<group>"; };
+		4A1108D1CFBF04043BA20D3369AA5DDC /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		4ED25DDDD91AFF2D801956326DAD73DE /* CurrencyText-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CurrencyText-Info.plist"; sourceTree = "<group>"; };
+		4FFDD2ED011A6C352E9FA1F0716E09DE /* RMHttp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RMHttp-Info.plist"; sourceTree = "<group>"; };
+		50200D0F202F3754BFB999E10E9F73DA /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		52C23050C53E51A76B0774CC95B0A28E /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		54937468CB29541A6F5384C91B4B6BB3 /* OptionalBinding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalBinding.swift; path = Sources/SwiftUI/OptionalBinding.swift; sourceTree = "<group>"; };
 		595CE81E81FC07FC9631DD1E7FCB6E94 /* Pods-Converter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Converter-dummy.m"; sourceTree = "<group>"; };
-		5A276A5A0277160A274A80AAD05DF8F6 /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
+		5A4DDA060F9EDBE96367256679C7F9B8 /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
 		5C4A456EFDF61C6BA04B5D186CBFE10D /* Pods-Converter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Converter.modulemap"; sourceTree = "<group>"; };
-		5DF77FBF90117A7229E1510718B7EFD2 /* RMBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMBuilder.swift; path = RMHttp/Classes/RMBuilder.swift; sourceTree = "<group>"; };
-		6540626A560A1C3BBB6A6D304E7F0BC6 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		65F2C3588642B2899C5539B2A9862663 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
-		6E457E132DAB63A280ADF1401CAF18F8 /* RMHttp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RMHttp.release.xcconfig; sourceTree = "<group>"; };
-		71D6F82BF40422519B555B7B575D3F29 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
-		73E341D3F75D6BBBF710DCC5B32ED9EA /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
-		763239C2C7C7165ACBAA3D16EBC94259 /* RMParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMParser.swift; path = RMHttp/Classes/RMParser.swift; sourceTree = "<group>"; };
-		791EC98BB6B002605BC2BD0F949C4F51 /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		654DA422AEB03C190D56B18435738D90 /* RMCommons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMCommons.swift; path = RMHttp/Classes/RMCommons.swift; sourceTree = "<group>"; };
+		69CB1D60D748A4190C437D011422F5E3 /* RMParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMParams.swift; path = RMHttp/Classes/RMParams.swift; sourceTree = "<group>"; };
+		6B8F4DAE1D99F9CBB83DFF7D4058F381 /* RMHttp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMHttp.swift; path = RMHttp/Classes/RMHttp.swift; sourceTree = "<group>"; };
+		6E9CAB21485FCEF0473AFEFBBB568C9B /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		7144713F00D8057EC1ECADD384398504 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		7257D1631883D1DC3BE03ECD451389BF /* CurrencyLocale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrencyLocale.swift; path = Sources/Formatter/CurrencyLocale.swift; sourceTree = "<group>"; };
+		752418F47640E22E59D81B37B2AA42AB /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		772311E1D1499BAEFE841C930C3DABC5 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		7977365AE49EF86E0E2F83A5667B16DA /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7C3A3B1B1AD8A6FA70CECDC23C3ED363 /* RMRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMRequest.swift; path = RMHttp/Classes/RMRequest.swift; sourceTree = "<group>"; };
-		7C8C3D0FCF2900F21342E1ED5682BBB7 /* RMHttp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RMHttp-umbrella.h"; sourceTree = "<group>"; };
-		7D531BDA111DDC833C9FCDFFB1BB70F8 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		812E492323B2CBE9EBF5E91F0DD328DE /* RMTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMTime.swift; path = RMHttp/Classes/RMTime.swift; sourceTree = "<group>"; };
-		81893069A0DB7F9B3BA4E8FECAA07641 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		7E03BE88FA1253FC4FFCC7B4FEAF6889 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		8092472A1369F39EB52B94D7F8901DD1 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		821FFE48FF6FDF84B7A20FDDC8C9C956 /* Pods-Converter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Converter-acknowledgements.markdown"; sourceTree = "<group>"; };
-		82B661AD76417B83B9A7A05BDE3DD3A7 /* MBProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		82EB322021BC5917F0E4F04F677E6C47 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		89D841B7FE0D55CA40EE9623202142BB /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		8A0C9F94C92980FAD7BD0FD154FD04BB /* RMHttp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RMHttp-prefix.pch"; sourceTree = "<group>"; };
-		8A4807E83D470F239F75DF137EBFFB44 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		8708FE0E7B2AC0E66B197D919C12C6CD /* RMHttp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RMHttp.modulemap; sourceTree = "<group>"; };
+		884EBE5A43A33211326FD3A10089C341 /* CurrencyTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrencyTextField.swift; path = Sources/SwiftUI/CurrencyTextField.swift; sourceTree = "<group>"; };
 		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BF9E7191745614E3211027DA30AB2F2 /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
-		8C986AF2FB83A278044C62E9F547B01C /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
-		8E03589A0F9DC11646E044309B90E6C3 /* RMError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMError.swift; path = RMHttp/Classes/RMError.swift; sourceTree = "<group>"; };
+		90216DD1C17DF032C4C91200270855DE /* CurrencyText */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CurrencyText; path = CurrencyText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D9108C235C1E4B827B9212DCE00506 /* ActionSheetPicker-3.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ActionSheetPicker-3.0-Info.plist"; sourceTree = "<group>"; };
 		9328E060EC7B190FB2A42B459CDE3E8C /* Pods-Converter */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Converter"; path = Pods_Converter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9431E6A9E838790994F033E4E5BD7AB8 /* ActionSheetPicker-3.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.debug.xcconfig"; sourceTree = "<group>"; };
-		96F6048D51D7243B1DEB51F8390AAAA3 /* RMHttp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMHttp.swift; path = RMHttp/Classes/RMHttp.swift; sourceTree = "<group>"; };
+		9381366278E09FA6D364C141D1FA2A12 /* RMResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMResponse.swift; path = RMHttp/Classes/RMResponse.swift; sourceTree = "<group>"; };
+		98D2717B0AB43D4369B27D338DE47180 /* ActionSheetPicker-3.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.debug.xcconfig"; sourceTree = "<group>"; };
 		993D1812E78F6563A8EC18AC3C457CE2 /* Pods-Converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Converter.debug.xcconfig"; sourceTree = "<group>"; };
+		9A15A8C4BC423067D20BFF14E095057D /* Currency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Sources/Formatter/Currency.swift; sourceTree = "<group>"; };
+		9BFC9BCC0846365DDEA49B8D47559E62 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/DistancePickerView.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A006EB44028037AA200C24A900CC264B /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		A08FD345E17D868568D81275FCDD591C /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		A37218E6BA1F590BBDB2EF2F431CE315 /* RMBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMBuilder.swift; path = RMHttp/Classes/RMBuilder.swift; sourceTree = "<group>"; };
 		A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		AB6D8028D597300545DEE7A1588A58A0 /* RMHttp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RMHttp.debug.xcconfig; sourceTree = "<group>"; };
-		B03657E36D31C7D34D06BAC549FEE853 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/SWActionSheet.h; sourceTree = "<group>"; };
-		B1C27CD012EE14959C365114527AA597 /* RMResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMResponse.swift; path = RMHttp/Classes/RMResponse.swift; sourceTree = "<group>"; };
-		B4AECF665A2FC3AE17013E536D7F58FF /* RMCommons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMCommons.swift; path = RMHttp/Classes/RMCommons.swift; sourceTree = "<group>"; };
-		B4CEDB45894597FA77C404495C0CE259 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		AC058CEDFD3B671F8E8776A79AA83A27 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		B556761DD9C5F1186C0A4DC83AD89DD9 /* ActionSheetPicker-3.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.release.xcconfig"; sourceTree = "<group>"; };
 		B96F2DDD3EB6348251C500A33F2DD954 /* RMHttp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RMHttp; path = RMHttp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD743B31C4988CF636114069221C19FA /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
-		C028E8BA81680D6A72F68C8EA82C8611 /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
-		C044BD41018FB7DE865BB2CEFA550412 /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		BB83202F81057B9F1543D13612D57136 /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		BB89A508B75AFF5279FDC91844A7EC5C /* RMHttp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RMHttp-umbrella.h"; sourceTree = "<group>"; };
 		C08C4D1D672945E3A8909641BEC0B1B8 /* Pods-Converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Converter.release.xcconfig"; sourceTree = "<group>"; };
-		C12D4DDC435C7E2AD1DB58F0E980FF68 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
-		C3239767FDE3F7456456F05A94B19259 /* RMRequestManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMRequestManager.swift; path = RMHttp/Classes/RMRequestManager.swift; sourceTree = "<group>"; };
-		C585E7A6BE7167F233F92C5C9F313038 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/DistancePickerView.m; sourceTree = "<group>"; };
-		C6FCE3F603CD4BE28F344478E43C366A /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
-		CEA5EB75347719A429051C4D108058B4 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
-		D2D1E5F7169D5E7E3EB62EB203FC44F0 /* RMHttp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RMHttp-dummy.m"; sourceTree = "<group>"; };
-		D45034274C51144ACFB6493EA911D6D1 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		C1629D3C0173C22119DA1C3416D3124B /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		C2273FF10F409EF10F8254251B9CF085 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		C847FF47AF3BC88DAD85CB4562FC9187 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrencyFormatter.swift; path = Sources/Formatter/CurrencyFormatter.swift; sourceTree = "<group>"; };
+		D062CBD090838AF793C8DFA4380966EF /* RMHttp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RMHttp-prefix.pch"; sourceTree = "<group>"; };
+		D49C43FB59A76D1CF5B508D7B815B0D3 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Sources/Formatter/String.swift; sourceTree = "<group>"; };
+		D641A0779163563BC34D0B73F347BE81 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker-3.0 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "ActionSheetPicker-3.0"; path = ActionSheetPicker_3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D83047E2EAA417A89E80648F26C2DC42 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
-		DEC68C966C665446D885113345DA0AC2 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
-		E1C9E6BE264128D342F57205897FB7A5 /* RMHttp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RMHttp-Info.plist"; sourceTree = "<group>"; };
-		E867D68213D9C177C8AD5ADAB7085EE8 /* RMFormDataFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMFormDataFile.swift; path = RMHttp/Classes/RMFormDataFile.swift; sourceTree = "<group>"; };
-		EBD1BC4FA9C7BB164F21103D95F71774 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
-		EC3805B7AB01B159E9A07BFA7012DBD3 /* RMParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMParams.swift; path = RMHttp/Classes/RMParams.swift; sourceTree = "<group>"; };
-		F078B99AFE25B0FAB30C443EE101E219 /* ActionSheetPicker-3.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ActionSheetPicker-3.0-Info.plist"; sourceTree = "<group>"; };
-		F1766DEA438C0BAACCD828BBDC6CA597 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		DA2ACF12A20720D0C4EC879909433CC3 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		DDC39E4125A9A744A832279BA6BDEBE9 /* CurrencyText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CurrencyText.debug.xcconfig; sourceTree = "<group>"; };
+		E12CBE9B7EB80F219665DA00C7AA1925 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		E40F7EDDA19E25C4B0E8484D21CC6BE4 /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		E5003503E43361E9C574E0B16D459CBC /* CurrencyText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CurrencyText-prefix.pch"; sourceTree = "<group>"; };
+		E5865412B7BCF07BC4D79E5054E186E8 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		E5ACBD7F1D1DD33402EAF3B11378A07A /* CurrencyText-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CurrencyText-umbrella.h"; sourceTree = "<group>"; };
+		E82B3800A4334FC53D94B88B6AD0EACB /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		E909E6C6EC809FCD1FD6273384EECFDD /* RMError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMError.swift; path = RMHttp/Classes/RMError.swift; sourceTree = "<group>"; };
+		EE4DAF3390D175306A83762C755A7FCB /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/DistancePickerView.m; sourceTree = "<group>"; };
 		F2330E82B5B8DE0D7287B652F1B59BB5 /* Pods-Converter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Converter-umbrella.h"; sourceTree = "<group>"; };
-		F28D73F19F749C0CA2C9244C62E37BCD /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		F4DA1C34A5361C82605E06DA8E2267CF /* RMFormDataFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RMFormDataFile.swift; path = RMHttp/Classes/RMFormDataFile.swift; sourceTree = "<group>"; };
 		FCD68BF9266575F422D48357DDE4964B /* Pods-Converter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Converter-acknowledgements.plist"; sourceTree = "<group>"; };
+		FE66CD8738080D162A8BB7F9C742B6B7 /* UITextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextField.swift; path = Sources/UITextFieldDelegate/UITextField.swift; sourceTree = "<group>"; };
+		FE86432990C0A37F8E38271E04FA166E /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/SWActionSheet.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		13837BB9F0756B737CE62DB8A6954B39 /* Frameworks */ = {
+		98749AF04F4EEDEE8C2AE9BBBA79A3E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF5FDE30E2EF4FB378A79D0FA8B388A /* Foundation.framework in Frameworks */,
+				5AF440BA4E270DE3BD33032E5D6B0F38 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,38 +236,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0A8C242264FC13B93DE937A0CFEE6BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8E235701063C07D8E49606A6149A38 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CB75780AAC1CC6FC71A30D6570CBED6 /* RMHttp */ = {
+		1BD12F5AD7D4E8CC7DDC3462E026842B /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				5DF77FBF90117A7229E1510718B7EFD2 /* RMBuilder.swift */,
-				B4AECF665A2FC3AE17013E536D7F58FF /* RMCommons.swift */,
-				8E03589A0F9DC11646E044309B90E6C3 /* RMError.swift */,
-				E867D68213D9C177C8AD5ADAB7085EE8 /* RMFormDataFile.swift */,
-				96F6048D51D7243B1DEB51F8390AAAA3 /* RMHttp.swift */,
-				EC3805B7AB01B159E9A07BFA7012DBD3 /* RMParams.swift */,
-				763239C2C7C7165ACBAA3D16EBC94259 /* RMParser.swift */,
-				7C3A3B1B1AD8A6FA70CECDC23C3ED363 /* RMRequest.swift */,
-				C3239767FDE3F7456456F05A94B19259 /* RMRequestManager.swift */,
-				B1C27CD012EE14959C365114527AA597 /* RMResponse.swift */,
-				812E492323B2CBE9EBF5E91F0DD328DE /* RMTime.swift */,
-				F7FF3FA99B43823341A393D8CB59027C /* Support Files */,
+				D641A0779163563BC34D0B73F347BE81 /* MBProgressHUD.h */,
+				82EB322021BC5917F0E4F04F677E6C47 /* MBProgressHUD.m */,
+				CBC9ABE242800A46705392CDF6A34DD2 /* Support Files */,
 			);
-			name = RMHttp;
-			path = RMHttp;
+			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		5C5754D97790639AA5B58B6B3510D0B5 /* Products */ = {
+		3330D4863B35B4D3184B0267467E23EA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker-3.0 */,
-				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */,
-				9328E060EC7B190FB2A42B459CDE3E8C /* Pods-Converter */,
-				B96F2DDD3EB6348251C500A33F2DD954 /* RMHttp */,
+				86E367754FE51FB4B7665A94BB85DD8A /* ActionSheetPicker-3.0 */,
+				4985F0DADAE0C93DFB509C6BCEB31DC9 /* CurrencyText */,
+				1BD12F5AD7D4E8CC7DDC3462E026842B /* MBProgressHUD */,
+				FCC85EE31C1B0975E06FD5F7A1BAD3C4 /* RMHttp */,
 			);
-			name = Products;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4985F0DADAE0C93DFB509C6BCEB31DC9 /* CurrencyText */ = {
+			isa = PBXGroup;
+			children = (
+				9A15A8C4BC423067D20BFF14E095057D /* Currency.swift */,
+				C847FF47AF3BC88DAD85CB4562FC9187 /* CurrencyFormatter.swift */,
+				7257D1631883D1DC3BE03ECD451389BF /* CurrencyLocale.swift */,
+				884EBE5A43A33211326FD3A10089C341 /* CurrencyTextField.swift */,
+				15246303624A3DB7E6BA139A69CE9A95 /* CurrencyTextFieldConfiguration.swift */,
+				4330B89AD4E4F2B94256DB9247B40958 /* CurrencyUITextFieldDelegate.swift */,
+				3F5B25F656C40467CB3FF6D3949F2B69 /* Fixtures+CurrencyFormatter.swift */,
+				02785F77EC9DBB96CE16B2141F7E60B2 /* Fixtures+CurrencyTextFieldConfiguration.swift */,
+				49ED321E2BD8F1C4977FFACB3AE27D9D /* NumberFormatter.swift */,
+				54937468CB29541A6F5384C91B4B6BB3 /* OptionalBinding.swift */,
+				D49C43FB59A76D1CF5B508D7B815B0D3 /* String.swift */,
+				FE66CD8738080D162A8BB7F9C742B6B7 /* UITextField.swift */,
+				2D045CBCEA232FD6EC3E99616818B12A /* WrappedTextField.swift */,
+				F2065B3796034081B5733E3C083024AC /* CurrencyFormatter */,
+				9864A75F4EAFF859532EF495D5FA5EEF /* CurrencyTextField */,
+				FE2C9938EBC7EC796705E5083724C474 /* CurrencyUITextField */,
+				A7868A7AD2CADD865CE8F05D4B2543D5 /* Support Files */,
+			);
+			name = CurrencyText;
+			path = CurrencyText;
 			sourceTree = "<group>";
 		};
 		68223E44B1FFDC46334263327D0EA614 /* Pods-Converter */ = {
@@ -243,84 +311,85 @@
 			path = "Target Support Files/Pods-Converter";
 			sourceTree = "<group>";
 		};
-		82C2683D2981A253A0C7D61466517D29 /* Pods */ = {
+		86ADE061F49A253C94CD1441795D9DE0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				97BF356D51B8B140ECD557D0A0130693 /* ActionSheetPicker-3.0 */,
-				8B0F2F335A271EC9F68D86CB7BEAB9FF /* MBProgressHUD */,
-				0CB75780AAC1CC6FC71A30D6570CBED6 /* RMHttp */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		88933419AE83B57F586F1D3AFAA3D2A3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5A276A5A0277160A274A80AAD05DF8F6 /* ActionSheetPicker-3.0.modulemap */,
-				8BF9E7191745614E3211027DA30AB2F2 /* ActionSheetPicker-3.0-dummy.m */,
-				F078B99AFE25B0FAB30C443EE101E219 /* ActionSheetPicker-3.0-Info.plist */,
-				C028E8BA81680D6A72F68C8EA82C8611 /* ActionSheetPicker-3.0-prefix.pch */,
-				C044BD41018FB7DE865BB2CEFA550412 /* ActionSheetPicker-3.0-umbrella.h */,
-				9431E6A9E838790994F033E4E5BD7AB8 /* ActionSheetPicker-3.0.debug.xcconfig */,
-				23DB1E983140603CEDC35A018FEB9F4E /* ActionSheetPicker-3.0.release.xcconfig */,
+				8708FE0E7B2AC0E66B197D919C12C6CD /* RMHttp.modulemap */,
+				0B5BDEFAD7E50816377A610335B5BEA1 /* RMHttp-dummy.m */,
+				4FFDD2ED011A6C352E9FA1F0716E09DE /* RMHttp-Info.plist */,
+				D062CBD090838AF793C8DFA4380966EF /* RMHttp-prefix.pch */,
+				BB89A508B75AFF5279FDC91844A7EC5C /* RMHttp-umbrella.h */,
+				0DE921A800C91A6063B7154433C8CBA1 /* RMHttp.debug.xcconfig */,
+				45591B5F01E1568690443A63769409B1 /* RMHttp.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/ActionSheetPicker-3.0";
+			path = "../Target Support Files/RMHttp";
 			sourceTree = "<group>";
 		};
-		8B0F2F335A271EC9F68D86CB7BEAB9FF /* MBProgressHUD */ = {
+		86E367754FE51FB4B7665A94BB85DD8A /* ActionSheetPicker-3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				33C3C7C4CF560DB697E11A46301AB22D /* MBProgressHUD.h */,
-				7D531BDA111DDC833C9FCDFFB1BB70F8 /* MBProgressHUD.m */,
-				A4E88EBC28B3E753A128F9F026C87AB7 /* Support Files */,
-			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		97BF356D51B8B140ECD557D0A0130693 /* ActionSheetPicker-3.0 */ = {
-			isa = PBXGroup;
-			children = (
-				F28D73F19F749C0CA2C9244C62E37BCD /* AbstractActionSheetPicker.h */,
-				89D841B7FE0D55CA40EE9623202142BB /* AbstractActionSheetPicker.m */,
-				8A4807E83D470F239F75DF137EBFFB44 /* ActionSheetCustomPicker.h */,
-				D83047E2EAA417A89E80648F26C2DC42 /* ActionSheetCustomPicker.m */,
-				8C986AF2FB83A278044C62E9F547B01C /* ActionSheetCustomPickerDelegate.h */,
-				263FDAAC399745E8498C1526F17B7389 /* ActionSheetDatePicker.h */,
-				C12D4DDC435C7E2AD1DB58F0E980FF68 /* ActionSheetDatePicker.m */,
-				DEC68C966C665446D885113345DA0AC2 /* ActionSheetDistancePicker.h */,
-				CEA5EB75347719A429051C4D108058B4 /* ActionSheetDistancePicker.m */,
-				71D6F82BF40422519B555B7B575D3F29 /* ActionSheetLocalePicker.h */,
-				EBD1BC4FA9C7BB164F21103D95F71774 /* ActionSheetLocalePicker.m */,
-				791EC98BB6B002605BC2BD0F949C4F51 /* ActionSheetMultipleStringPicker.h */,
-				65F2C3588642B2899C5539B2A9862663 /* ActionSheetMultipleStringPicker.m */,
-				4D542B9DFAB0DEF79CA7AF343DD5312E /* ActionSheetPicker.h */,
-				BD743B31C4988CF636114069221C19FA /* ActionSheetStringPicker.h */,
-				73E341D3F75D6BBBF710DCC5B32ED9EA /* ActionSheetStringPicker.m */,
-				81893069A0DB7F9B3BA4E8FECAA07641 /* DistancePickerView.h */,
-				C585E7A6BE7167F233F92C5C9F313038 /* DistancePickerView.m */,
-				B03657E36D31C7D34D06BAC549FEE853 /* SWActionSheet.h */,
-				D45034274C51144ACFB6493EA911D6D1 /* SWActionSheet.m */,
-				88933419AE83B57F586F1D3AFAA3D2A3 /* Support Files */,
+				DA2ACF12A20720D0C4EC879909433CC3 /* AbstractActionSheetPicker.h */,
+				7977365AE49EF86E0E2F83A5667B16DA /* AbstractActionSheetPicker.m */,
+				C1629D3C0173C22119DA1C3416D3124B /* ActionSheetCustomPicker.h */,
+				50200D0F202F3754BFB999E10E9F73DA /* ActionSheetCustomPicker.m */,
+				E5865412B7BCF07BC4D79E5054E186E8 /* ActionSheetCustomPickerDelegate.h */,
+				2E2F69C1AAB2B46B29269E8ABD01CE10 /* ActionSheetDatePicker.h */,
+				772311E1D1499BAEFE841C930C3DABC5 /* ActionSheetDatePicker.m */,
+				52C23050C53E51A76B0774CC95B0A28E /* ActionSheetDistancePicker.h */,
+				A006EB44028037AA200C24A900CC264B /* ActionSheetDistancePicker.m */,
+				1AE372DDD04C22E07A829F811F37A9BE /* ActionSheetLocalePicker.h */,
+				27218F5A003DD165715FB73C183AE1C8 /* ActionSheetLocalePicker.m */,
+				A08FD345E17D868568D81275FCDD591C /* ActionSheetMultipleStringPicker.h */,
+				2A9BE72AA77F1099ACD2EE41DBB684E9 /* ActionSheetMultipleStringPicker.m */,
+				752418F47640E22E59D81B37B2AA42AB /* ActionSheetPicker.h */,
+				C2273FF10F409EF10F8254251B9CF085 /* ActionSheetStringPicker.h */,
+				7144713F00D8057EC1ECADD384398504 /* ActionSheetStringPicker.m */,
+				9BFC9BCC0846365DDEA49B8D47559E62 /* DistancePickerView.h */,
+				EE4DAF3390D175306A83762C755A7FCB /* DistancePickerView.m */,
+				FE86432990C0A37F8E38271E04FA166E /* SWActionSheet.h */,
+				AC058CEDFD3B671F8E8776A79AA83A27 /* SWActionSheet.m */,
+				885644EA76628052409347A425F5DD48 /* Support Files */,
 			);
 			name = "ActionSheetPicker-3.0";
 			path = "ActionSheetPicker-3.0";
 			sourceTree = "<group>";
 		};
-		A4E88EBC28B3E753A128F9F026C87AB7 /* Support Files */ = {
+		885644EA76628052409347A425F5DD48 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				109660D5910DC5023F46B078ADDCB026 /* MBProgressHUD.modulemap */,
-				B4CEDB45894597FA77C404495C0CE259 /* MBProgressHUD-dummy.m */,
-				4B1FF9D21B083F8B75B02D4B4D9D8E91 /* MBProgressHUD-Info.plist */,
-				F1766DEA438C0BAACCD828BBDC6CA597 /* MBProgressHUD-prefix.pch */,
-				6540626A560A1C3BBB6A6D304E7F0BC6 /* MBProgressHUD-umbrella.h */,
-				82B661AD76417B83B9A7A05BDE3DD3A7 /* MBProgressHUD.debug.xcconfig */,
-				C6FCE3F603CD4BE28F344478E43C366A /* MBProgressHUD.release.xcconfig */,
+				5A4DDA060F9EDBE96367256679C7F9B8 /* ActionSheetPicker-3.0.modulemap */,
+				6E9CAB21485FCEF0473AFEFBBB568C9B /* ActionSheetPicker-3.0-dummy.m */,
+				90D9108C235C1E4B827B9212DCE00506 /* ActionSheetPicker-3.0-Info.plist */,
+				E82B3800A4334FC53D94B88B6AD0EACB /* ActionSheetPicker-3.0-prefix.pch */,
+				BB83202F81057B9F1543D13612D57136 /* ActionSheetPicker-3.0-umbrella.h */,
+				98D2717B0AB43D4369B27D338DE47180 /* ActionSheetPicker-3.0.debug.xcconfig */,
+				B556761DD9C5F1186C0A4DC83AD89DD9 /* ActionSheetPicker-3.0.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		9864A75F4EAFF859532EF495D5FA5EEF /* CurrencyTextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CurrencyTextField;
+			sourceTree = "<group>";
+		};
+		A7868A7AD2CADD865CE8F05D4B2543D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E1C49DB9BAC61D94D383E5D543C2F7B /* CurrencyText.modulemap */,
+				35CFD6EE73B2952916EB1989656B3259 /* CurrencyText-dummy.m */,
+				4ED25DDDD91AFF2D801956326DAD73DE /* CurrencyText-Info.plist */,
+				E5003503E43361E9C574E0B16D459CBC /* CurrencyText-prefix.pch */,
+				E5ACBD7F1D1DD33402EAF3B11378A07A /* CurrencyText-umbrella.h */,
+				DDC39E4125A9A744A832279BA6BDEBE9 /* CurrencyText.debug.xcconfig */,
+				28026DCDC319C78EC21752E0FE236762 /* CurrencyText.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CurrencyText";
 			sourceTree = "<group>";
 		};
 		A7C28256744E609DEEB9062C8F3AFA21 /* Targets Support Files */ = {
@@ -339,30 +408,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CBC9ABE242800A46705392CDF6A34DD2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8092472A1369F39EB52B94D7F8901DD1 /* MBProgressHUD.modulemap */,
+				E12CBE9B7EB80F219665DA00C7AA1925 /* MBProgressHUD-dummy.m */,
+				E40F7EDDA19E25C4B0E8484D21CC6BE4 /* MBProgressHUD-Info.plist */,
+				4A1108D1CFBF04043BA20D3369AA5DDC /* MBProgressHUD-prefix.pch */,
+				7E03BE88FA1253FC4FFCC7B4FEAF6889 /* MBProgressHUD-umbrella.h */,
+				3FAE43C222569652543ECCE646F6F8A0 /* MBProgressHUD.debug.xcconfig */,
+				3D034D4CC0350020EB49DDDD97BB60B1 /* MBProgressHUD.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				82C2683D2981A253A0C7D61466517D29 /* Pods */,
-				5C5754D97790639AA5B58B6B3510D0B5 /* Products */,
+				3330D4863B35B4D3184B0267467E23EA /* Pods */,
+				FFEFCD579EFBC2B09E7793E3655654E5 /* Products */,
 				A7C28256744E609DEEB9062C8F3AFA21 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F7FF3FA99B43823341A393D8CB59027C /* Support Files */ = {
+		F2065B3796034081B5733E3C083024AC /* CurrencyFormatter */ = {
 			isa = PBXGroup;
 			children = (
-				3B0749CE823CFAC093DFA340499E73FB /* RMHttp.modulemap */,
-				D2D1E5F7169D5E7E3EB62EB203FC44F0 /* RMHttp-dummy.m */,
-				E1C9E6BE264128D342F57205897FB7A5 /* RMHttp-Info.plist */,
-				8A0C9F94C92980FAD7BD0FD154FD04BB /* RMHttp-prefix.pch */,
-				7C8C3D0FCF2900F21342E1ED5682BBB7 /* RMHttp-umbrella.h */,
-				AB6D8028D597300545DEE7A1588A58A0 /* RMHttp.debug.xcconfig */,
-				6E457E132DAB63A280ADF1401CAF18F8 /* RMHttp.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/RMHttp";
+			name = CurrencyFormatter;
 			sourceTree = "<group>";
 		};
 		F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */ = {
@@ -374,6 +450,45 @@
 				04D60AC13D33197690A05C641925DDDA /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		FCC85EE31C1B0975E06FD5F7A1BAD3C4 /* RMHttp */ = {
+			isa = PBXGroup;
+			children = (
+				A37218E6BA1F590BBDB2EF2F431CE315 /* RMBuilder.swift */,
+				654DA422AEB03C190D56B18435738D90 /* RMCommons.swift */,
+				E909E6C6EC809FCD1FD6273384EECFDD /* RMError.swift */,
+				F4DA1C34A5361C82605E06DA8E2267CF /* RMFormDataFile.swift */,
+				6B8F4DAE1D99F9CBB83DFF7D4058F381 /* RMHttp.swift */,
+				69CB1D60D748A4190C437D011422F5E3 /* RMParams.swift */,
+				30E95F1435A9CD940D006ED051F44D4A /* RMParser.swift */,
+				424376522E4B74DAAE677FBBFBCD9011 /* RMRequest.swift */,
+				1502739300876A4BAE514F165A389E0C /* RMRequestManager.swift */,
+				9381366278E09FA6D364C141D1FA2A12 /* RMResponse.swift */,
+				35F8B39B6E51EBC83435958CE7D54BD3 /* RMTime.swift */,
+				86ADE061F49A253C94CD1441795D9DE0 /* Support Files */,
+			);
+			name = RMHttp;
+			path = RMHttp;
+			sourceTree = "<group>";
+		};
+		FE2C9938EBC7EC796705E5083724C474 /* CurrencyUITextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CurrencyUITextField;
+			sourceTree = "<group>";
+		};
+		FFEFCD579EFBC2B09E7793E3655654E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker-3.0 */,
+				90216DD1C17DF032C4C91200270855DE /* CurrencyText */,
+				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */,
+				9328E060EC7B190FB2A42B459CDE3E8C /* Pods-Converter */,
+				B96F2DDD3EB6348251C500A33F2DD954 /* RMHttp */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,11 +530,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B476F398FE30CA1945E7195115F8BE04 /* Headers */ = {
+		AA4FD30038975F32A7E66C266F155605 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F00428D553C1A5167509952131C81D3 /* Pods-Converter-umbrella.h in Headers */,
+				152E2BD0549BAAB6008334E49FAECD5F /* Pods-Converter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA2CC0599244FB19A7775EE37CE4B84A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C151C3AD26880D0103DA7F868106AAF /* CurrencyText-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,19 +551,20 @@
 /* Begin PBXNativeTarget section */
 		0749B551ECE670B70C8E0B321E64902D /* Pods-Converter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC0EE2E2244AF324F52A7007804B4550 /* Build configuration list for PBXNativeTarget "Pods-Converter" */;
+			buildConfigurationList = 489E3D9AE07934C2806A78A195CC825D /* Build configuration list for PBXNativeTarget "Pods-Converter" */;
 			buildPhases = (
-				B476F398FE30CA1945E7195115F8BE04 /* Headers */,
-				FDA99FEF66C38C22E7A0BE62B0E022BF /* Sources */,
-				13837BB9F0756B737CE62DB8A6954B39 /* Frameworks */,
-				2EC427490D73A898F31F00584E96D87D /* Resources */,
+				AA4FD30038975F32A7E66C266F155605 /* Headers */,
+				3A88FFF27EAC80238E38B0E8910F29DB /* Sources */,
+				98749AF04F4EEDEE8C2AE9BBBA79A3E1 /* Frameworks */,
+				27BBE90A8FD2D5D24266EF5FCA7439E0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F1942F0DA4AFA911B4A21AEB1B431B98 /* PBXTargetDependency */,
-				132E24140073122D0F850B904FA8D0F2 /* PBXTargetDependency */,
-				9F7A2F44ABB5213F55951D7FAF6AFD2B /* PBXTargetDependency */,
+				4CE555637654A38A084A7F1050C0BCFC /* PBXTargetDependency */,
+				5F0B5ABAE5C33A9B381C37E5E4DF2D47 /* PBXTargetDependency */,
+				B2446AE32C7139E208778360D18F7EC3 /* PBXTargetDependency */,
+				520B98DD01972CDC216D45B60C1E1C9F /* PBXTargetDependency */,
 			);
 			name = "Pods-Converter";
 			productName = Pods_Converter;
@@ -463,6 +587,24 @@
 			name = RMHttp;
 			productName = RMHttp;
 			productReference = B96F2DDD3EB6348251C500A33F2DD954 /* RMHttp */;
+			productType = "com.apple.product-type.framework";
+		};
+		4269AD921DFF5B86E3B350C710067618 /* CurrencyText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D17AED2B894EBA71F55E5B95B3EA7D08 /* Build configuration list for PBXNativeTarget "CurrencyText" */;
+			buildPhases = (
+				BA2CC0599244FB19A7775EE37CE4B84A /* Headers */,
+				7C7C89A086F4102A3A8AD98075FB58BA /* Sources */,
+				F0A8C242264FC13B93DE937A0CFEE6BC /* Frameworks */,
+				35972C8B9240BA49CE41766BD5999F16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CurrencyText;
+			productName = CurrencyText;
+			productReference = 90216DD1C17DF032C4C91200270855DE /* CurrencyText */;
 			productType = "com.apple.product-type.framework";
 		};
 		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
@@ -519,11 +661,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5C5754D97790639AA5B58B6B3510D0B5 /* Products */;
+			productRefGroup = FFEFCD579EFBC2B09E7793E3655654E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */,
+				4269AD921DFF5B86E3B350C710067618 /* CurrencyText */,
 				82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */,
 				0749B551ECE670B70C8E0B321E64902D /* Pods-Converter */,
 				37A7BB0DDE1D2D4233517EA6AE230718 /* RMHttp */,
@@ -532,7 +675,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2EC427490D73A898F31F00584E96D87D /* Resources */ = {
+		27BBE90A8FD2D5D24266EF5FCA7439E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35972C8B9240BA49CE41766BD5999F16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -563,6 +713,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A88FFF27EAC80238E38B0E8910F29DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23031A84102CC1D9770C683AF4FE5465 /* Pods-Converter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B3433071AD749539BEA12D0C6BE4566 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -579,6 +737,27 @@
 				77D19C03E758B37FF86FEB9B6B3B565E /* RMRequestManager.swift in Sources */,
 				E9F102B3D30E53FA0000004646C7E932 /* RMResponse.swift in Sources */,
 				C5586F7E1FA203CD09DD3244ADEBED7C /* RMTime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C7C89A086F4102A3A8AD98075FB58BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AEDAEC7DACE0E5E538701B83BC550DF /* Currency.swift in Sources */,
+				210CEC562627BBA9E862CCFB72711BB3 /* CurrencyFormatter.swift in Sources */,
+				B9A4672DFA2635A51C5B402E1116064E /* CurrencyLocale.swift in Sources */,
+				83AE37972ECFD2F04632819425C49A43 /* CurrencyText-dummy.m in Sources */,
+				ACD6FE10F80B04CF3E13D9E9E9FB48AC /* CurrencyTextField.swift in Sources */,
+				4D2D8EF2E23C45CFC2786D337308C56B /* CurrencyTextFieldConfiguration.swift in Sources */,
+				721074F2A5CE66EC5C594248E82278BC /* CurrencyUITextFieldDelegate.swift in Sources */,
+				41FABB33B9D74D7AEB70FBD9282878A6 /* Fixtures+CurrencyFormatter.swift in Sources */,
+				181D21009B5EC448C44C4EEF34B90069 /* Fixtures+CurrencyTextFieldConfiguration.swift in Sources */,
+				C34BE23EE02F1E434CCDF21AF3E453B6 /* NumberFormatter.swift in Sources */,
+				349F02BFC0FE39CAB3F7C238667F5A62 /* OptionalBinding.swift in Sources */,
+				7430D4F7A339B76985A70E606DFB7ADB /* String.swift in Sources */,
+				A43DDE6F0F2E5F8BBBEFA3F5E60EA4E6 /* UITextField.swift in Sources */,
+				8DDDB3A1005DF14464176F945641281A /* WrappedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,75 +787,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDA99FEF66C38C22E7A0BE62B0E022BF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B7460103CE0A4A207B630EFDC9A88FB /* Pods-Converter-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		132E24140073122D0F850B904FA8D0F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = 3E6E039FBBCDEFEEEBCF1BBDD71C6F21 /* PBXContainerItemProxy */;
-		};
-		9F7A2F44ABB5213F55951D7FAF6AFD2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMHttp;
-			target = 37A7BB0DDE1D2D4233517EA6AE230718 /* RMHttp */;
-			targetProxy = 6E6A1EDB3F986D0B7150E9544EE50DCF /* PBXContainerItemProxy */;
-		};
-		F1942F0DA4AFA911B4A21AEB1B431B98 /* PBXTargetDependency */ = {
+		4CE555637654A38A084A7F1050C0BCFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ActionSheetPicker-3.0";
 			target = A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */;
-			targetProxy = F8560E13DB9EC3CA6270B4559616DC7A /* PBXContainerItemProxy */;
+			targetProxy = 23035090D83BC616B6198AC597FBD025 /* PBXContainerItemProxy */;
+		};
+		520B98DD01972CDC216D45B60C1E1C9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RMHttp;
+			target = 37A7BB0DDE1D2D4233517EA6AE230718 /* RMHttp */;
+			targetProxy = 582F637050C86AB39AC1089E16D19BFF /* PBXContainerItemProxy */;
+		};
+		5F0B5ABAE5C33A9B381C37E5E4DF2D47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CurrencyText;
+			target = 4269AD921DFF5B86E3B350C710067618 /* CurrencyText */;
+			targetProxy = 31A987156AA3F91F52B96176E21E6FC8 /* PBXContainerItemProxy */;
+		};
+		B2446AE32C7139E208778360D18F7EC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
+			targetProxy = F60FEFC67AEDD8BC75416138D93253DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		21D32233C0A58D1C527F08B19E380FC8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 993D1812E78F6563A8EC18AC3C457CE2 /* Pods-Converter.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Converter/Pods-Converter-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Converter/Pods-Converter.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -745,7 +885,7 @@
 		};
 		54B126D7179A40A61A5CFCB4BF9D0198 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB6D8028D597300545DEE7A1588A58A0 /* RMHttp.debug.xcconfig */;
+			baseConfigurationReference = 0DE921A800C91A6063B7154433C8CBA1 /* RMHttp.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -778,47 +918,9 @@
 			};
 			name = Debug;
 		};
-		712518A910AD5A9B5B54DB4E0E214A3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C08C4D1D672945E3A8909641BEC0B1B8 /* Pods-Converter.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Converter/Pods-Converter-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Converter/Pods-Converter.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		9790C8987900FFA7B022659DF25385D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23DB1E983140603CEDC35A018FEB9F4E /* ActionSheetPicker-3.0.release.xcconfig */;
+			baseConfigurationReference = B556761DD9C5F1186C0A4DC83AD89DD9 /* ActionSheetPicker-3.0.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -853,7 +955,7 @@
 		};
 		C3C37B487645A54D043C2C18BF002F24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6FCE3F603CD4BE28F344478E43C366A /* MBProgressHUD.release.xcconfig */;
+			baseConfigurationReference = 3D034D4CC0350020EB49DDDD97BB60B1 /* MBProgressHUD.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -888,7 +990,7 @@
 		};
 		C421AD9F55BAF6FCB985BF5415AC2374 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E457E132DAB63A280ADF1401CAF18F8 /* RMHttp.release.xcconfig */;
+			baseConfigurationReference = 45591B5F01E1568690443A63769409B1 /* RMHttp.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -915,6 +1017,42 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C6F4D73D4810889718905BAFFF380CDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28026DCDC319C78EC21752E0FE236762 /* CurrencyText.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CurrencyText/CurrencyText-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CurrencyText/CurrencyText-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CurrencyText/CurrencyText.modulemap";
+				PRODUCT_MODULE_NAME = CurrencyText;
+				PRODUCT_NAME = CurrencyText;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -984,9 +1122,81 @@
 			};
 			name = Release;
 		};
+		D252C6A167E4249E0397DC6F6F78C740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 993D1812E78F6563A8EC18AC3C457CE2 /* Pods-Converter.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Converter/Pods-Converter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Converter/Pods-Converter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DC5378A16903D0BC49F16CC8887DBC29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC39E4125A9A744A832279BA6BDEBE9 /* CurrencyText.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CurrencyText/CurrencyText-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CurrencyText/CurrencyText-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CurrencyText/CurrencyText.modulemap";
+				PRODUCT_MODULE_NAME = CurrencyText;
+				PRODUCT_NAME = CurrencyText;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DE569755C8FE69395D8E6C347DC7A5F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82B661AD76417B83B9A7A05BDE3DD3A7 /* MBProgressHUD.debug.xcconfig */;
+			baseConfigurationReference = 3FAE43C222569652543ECCE646F6F8A0 /* MBProgressHUD.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1018,9 +1228,47 @@
 			};
 			name = Debug;
 		};
+		E88CA60765A52DEC54FCA3A3E67530B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C08C4D1D672945E3A8909641BEC0B1B8 /* Pods-Converter.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Converter/Pods-Converter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Converter/Pods-Converter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F38ADA8C72DE9FB934F7B20DDB72F79C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9431E6A9E838790994F033E4E5BD7AB8 /* ActionSheetPicker-3.0.debug.xcconfig */;
+			baseConfigurationReference = 98D2717B0AB43D4369B27D338DE47180 /* ActionSheetPicker-3.0.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1073,6 +1321,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		489E3D9AE07934C2806A78A195CC825D /* Build configuration list for PBXNativeTarget "Pods-Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D252C6A167E4249E0397DC6F6F78C740 /* Debug */,
+				E88CA60765A52DEC54FCA3A3E67530B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5FBF9BBED697A2764595F2142D34D41F /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1091,11 +1348,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC0EE2E2244AF324F52A7007804B4550 /* Build configuration list for PBXNativeTarget "Pods-Converter" */ = {
+		D17AED2B894EBA71F55E5B95B3EA7D08 /* Build configuration list for PBXNativeTarget "CurrencyText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21D32233C0A58D1C527F08B19E380FC8 /* Debug */,
-				712518A910AD5A9B5B54DB4E0E214A3E /* Release */,
+				DC5378A16903D0BC49F16CC8887DBC29 /* Debug */,
+				C6F4D73D4810889718905BAFFF380CDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

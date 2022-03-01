@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import ActionSheetPicker_3_0
+import CurrencyText
 
 protocol ConversionCellDelegate {
     func didChangeCurrency(cell: ConversionCell, trans:Transaction, code: String)
@@ -22,6 +23,7 @@ class ConversionCell: UITableViewCell {
     
     var delegate:ConversionCellDelegate? = nil
     var transactionType: Transaction = .sell
+    var textFieldDelegate: CurrencyUITextFieldDelegate!
     
     static func dequeueCell(_ tableView:UITableView, _ indexPath: IndexPath) -> ConversionCell? {
         guard let cell = tableView.dequeueReusableCell(
@@ -34,6 +36,34 @@ class ConversionCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         typeIcon.layer.cornerRadius = typeIcon.frame.size.height / 2
+        setupTextFieldWithCurrencyDelegate()
+    }
+    
+    private func setupTextFieldWithCurrencyDelegate() {
+        let currencyFormatter = CurrencyFormatter {
+            $0.maxValue = 100000000
+            $0.hasDecimals = true
+            $0.alwaysShowsDecimalSeparator = true
+            $0.showCurrencySymbol = false
+        }
+
+        textFieldDelegate = CurrencyUITextFieldDelegate(formatter: currencyFormatter)
+        textFieldDelegate.clearsWhenValueIsZero = true
+        amountField.delegate = textFieldDelegate
+        amountField.addTarget(self, action: #selector(valueChange(_:)), for: .valueChanged)
+    }
+    
+    @objc func valueChange(_ textField: UITextField) {
+        
+        if transactionType == .sell && amountField.text != "" {
+            let storage = BalanceStorage.shared
+            let balance = storage.getBalance(forKey: storage.source)
+            if amountField.text!.toDouble() > balance {
+                let message = "Entered amount should not be greater than your \(storage.source) balance \(balance.toCurrency())"
+                UIAlertController(title: "Invalid Amount", message:message, onError: nil)
+                    .show(owner: delegate as! UIViewController, completion: nil)
+            }
+        }
     }
     
     func set(trans: Transaction) {
