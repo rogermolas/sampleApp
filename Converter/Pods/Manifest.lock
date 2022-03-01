@@ -1,24 +1,24 @@
 PODS:
   - ActionSheetPicker-3.0 (2.7.1)
+  - MBProgressHUD (1.2.0)
   - RMHttp (1.6.1)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
+  - MBProgressHUD
   - RMHttp
-  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
     - ActionSheetPicker-3.0
+    - MBProgressHUD
     - RMHttp
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   RMHttp: b7cb8f93d979a2a9404c43ca9018ced34dcf4951
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 40586ca04887586803fbfc1fb14db00350c41fe5
+PODFILE CHECKSUM: 6d47efa07204054a2990d40436d5a82f639672c6
 
 COCOAPODS: 1.11.2

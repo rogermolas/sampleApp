@@ -7,6 +7,7 @@
 
 import UIKit
 import ActionSheetPicker_3_0
+import MBProgressHUD
 
 class ViewController: UIViewController {
     
@@ -62,21 +63,34 @@ class ViewController: UIViewController {
                 .show(owner: self, completion: nil)
             return
         }
-
-        let action: callBack = {
-            // Update source and destination balance
-            BalanceStorage.shared.setBalance(amount: 0.0, forKey: self.source)
-            let convertedAmount = BalanceStorage.shared.getCoversion(forKey: self.destination)
-            BalanceStorage.shared.setBalance(amount: convertedAmount, forKey: self.destination)
-            self.tableView.reloadData()
-        }
-        let souceBalance = BalanceStorage.shared.getBalance(forKey: source)
-        let receiveBalance = BalanceStorage.shared.getCoversion(forKey: destination)
-        let commission = 0.4
         
-        let message = "You have converted \(souceBalance) \(source) to \(receiveBalance) \(destination). Commission Fee - \(commission) EUR"
-        UIAlertController.init(title: "Currency Converted", message: message, onDone: nil)
-            .show(owner: self, completion: action)
+        if source == destination {
+            let message = "Conversion using the same currency is not allowed"
+            UIAlertController.init(title: "Invalid Conversion", message: message, onDone: nil)
+                .show(owner: self, completion: nil)
+            return
+        }
+        
+        // Assuming it was doing a sending API request to server
+        let hud = MBProgressHUD.showAdded(to: self.navigationController!.view, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            hud.hide(animated: true)
+            let action: callBack = {
+                // Update source and destination balance
+                BalanceStorage.shared.setBalance(amount: 0.0, forKey: self.source)
+                let convertedAmount = BalanceStorage.shared.getCoversion(forKey: self.destination)
+                BalanceStorage.shared.setBalance(amount: convertedAmount, forKey: self.destination)
+                self.tableView.reloadData()
+            }
+            let souceBalance = BalanceStorage.shared.getBalance(forKey: self.source)
+            let receiveBalance = BalanceStorage.shared.getCoversion(forKey: self.destination)
+            let commission = 0.4
+            
+            let message = "You have converted \(souceBalance) \(self.source) to \(receiveBalance) \(self.destination). Commission Fee - \(commission) EUR"
+            UIAlertController.init(title: "Currency Converted", message: message, onDone: action)
+                .show(owner: self, completion: nil)
+        }
     }
     
     //MARK: - API

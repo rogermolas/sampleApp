@@ -11,21 +11,21 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-Converter.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>RMHttp.xcscheme</key>
+		<key>Pods-Converter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>SVProgressHUD.xcscheme</key>
+		<key>RMHttp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
