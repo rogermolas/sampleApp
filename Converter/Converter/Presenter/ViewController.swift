@@ -12,10 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var submitButton: UIButton!
-    
-    var source: String = "EUR"
-    var destination: String = ""
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +35,12 @@ class ViewController: UIViewController {
         } else {
             self.navigationController!.navigationBar.setBackgroundImage(image, for: .default)
         }
+        
+        //Get initial amount conversion for the current source to destination
+        let source = BalanceStorage.shared.source
+        let destination = BalanceStorage.shared.destination
+        let amount = BalanceStorage.shared.getBalance(forKey: source)
+        self.convertRequest(amount: amount, source: source, destination: destination)
     }
     
     // Generate image from Layer
@@ -47,6 +50,45 @@ class ViewController: UIViewController {
         let outputImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return outputImage!
+    }
+    
+    //MARK: - Action
+    
+    @IBAction func onSubmit(sender: UIButton) {
+        let action: callBack = {
+            
+        }
+        let source = BalanceStorage.shared.source
+        let destination = BalanceStorage.shared.destination
+        let souceBalance = BalanceStorage.shared.getBalance(forKey: source)
+        let receiveBalance = BalanceStorage.shared.getCoversion(forKey: destination)
+        let commission = 0.4
+        
+        let message = "You have converted \(souceBalance) \(source) to \(receiveBalance) \(destination). Commission Fee - \(commission) EUR"
+        UIAlertController.init(title: "Currency Converted", message: message, onDone: action)
+            .show(owner: self, completion: nil)
+    }
+    
+    //MARK: - API
+    func convertRequest(amount: Double, source: String, destination: String) {
+        let request = ConversionManager()
+        request.convert(amount: amount, from: source, to: destination)
+        { conversion, error in
+            
+            guard error == nil else {
+                UIAlertController.init(title: "Error", message: error, onError: nil)
+                    .show(owner: self, completion: nil)
+                let indexSet: IndexSet = [1]
+                self.tableView.reloadSections(indexSet, with: .none)
+                return
+            }
+            
+            if let c = conversion {
+                BalanceStorage.shared.setCoversion(amount: Double(c.amount)!, forKey: c.currency)
+                let indexSet: IndexSet = [1]
+                self.tableView.reloadSections(indexSet, with: .none)
+            }
+        }
     }
 }
 
@@ -84,18 +126,21 @@ extension ViewController: UITableViewDataSource {
     
 }
 
-//MARK: - UITableViewDelegate
+//MARK: - ConversionCellDelegate
 extension ViewController: ConversionCellDelegate {
     func didChangeCurrency(cell: ConversionCell, trans: Transaction, code: String) {
         if trans == .sell {
-            source = code
             BalanceStorage.shared.source = code
-            tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .none)
+            let destination = BalanceStorage.shared.destination
+            let amount = BalanceStorage.shared.getBalance(forKey: code)
+            self.convertRequest(amount: amount, source: code, destination: destination)
         }
-        if trans == .sell {
-            destination = code
+        
+        if trans == .recieve {
             BalanceStorage.shared.destination = code
-            tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .none)
+            let source = BalanceStorage.shared.source
+            let amount = BalanceStorage.shared.getBalance(forKey: source)
+            self.convertRequest(amount: amount, source: source, destination: code)
         }
     }
 }

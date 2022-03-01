@@ -12,10 +12,12 @@ class BalanceStorage {
     private var defaults = UserDefaults.standard
     
     struct Keys {
-        static let source = "conversion.source"
-        static let destination = "conversion.destination"
+        static let source = "result.conversion.source"
+        static var destination_amount = "result.conversion.amount"
+        static let destination = "result.conversion.destination"
     }
     
+    //Main Wallet
     func getBalance(forKey: String) -> Double {
         let balance = self.defaults.double(forKey: forKey)
         
@@ -27,8 +29,20 @@ class BalanceStorage {
         return balance
     }
     
-    func setBalance(forKey: String) -> Double {
-        return self.defaults.double(forKey: forKey)
+    // Call on submit
+    func setBalance(amount:Double, forKey: String) {
+        self.defaults.set(amount, forKey: forKey)
+    }
+    
+    // API conversion results
+    func getCoversion(forKey: String) -> Double {
+        let amountKey = "\(Keys.destination_amount).\(forKey)"
+        return self.defaults.double(forKey: amountKey)
+    }
+    
+    func setCoversion(amount:Double, forKey: String) {
+        let amountKey = "\(Keys.destination_amount).\(forKey)"
+        self.defaults.set(amount, forKey: amountKey)
     }
 
     var source: String {
@@ -50,7 +64,7 @@ class BalanceStorage {
             if source != nil {
                 return source!
             }
-            return "EUR"
+            return "USD"
         }
         set(value) {
             self.defaults.set(value, forKey: Keys.destination)

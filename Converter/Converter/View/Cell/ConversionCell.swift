@@ -47,12 +47,12 @@ class ConversionCell: UITableViewCell {
             self.updateButtonState(code: storage.source)
             self.amountField.text = "\(storage.getBalance(forKey: storage.source))"
             self.amountField.isEnabled = true
-        } else {
-            let destination = BalanceStorage.shared.destination
-            self.updateButtonState(code: destination)
+        }
+        
+        if trans == .recieve {
+            self.updateButtonState(code: storage.destination)
+            self.amountField.text = "\(storage.getCoversion(forKey: storage.destination))"
             self.amountField.isEnabled = false
-            
-            //TODO: API call to get the conversion rate
         }
     }
     

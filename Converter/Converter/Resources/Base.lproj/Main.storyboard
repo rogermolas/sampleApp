@@ -56,10 +56,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4d-Fu-OEA">
-                                                    <rect key="frame" x="25" y="7.5" width="45" height="45"/>
+                                                    <rect key="frame" x="25" y="10" width="40" height="40"/>
                                                     <color key="backgroundColor" red="0.94117647058823528" green="0.31372549019607843" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="2ky-mu-uQc"/>
+                                                        <constraint firstAttribute="height" constant="40" id="2ky-mu-uQc"/>
                                                         <constraint firstAttribute="width" secondItem="r4d-Fu-OEA" secondAttribute="height" multiplier="1:1" id="yAU-lc-Uck"/>
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,7 +67,7 @@
                                                     <buttonConfiguration key="configuration" style="plain" image="arrow.up" catalog="system"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcq-s0-Go1">
-                                                    <rect key="frame" x="85" y="21" width="7" height="18"/>
+                                                    <rect key="frame" x="80" y="21" width="7" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -149,6 +149,9 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSubmitWithSender:" destination="Bz8-22-hH5" eventType="touchUpInside" id="d5i-8T-4se"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0WS-cR-wfK"/>

@@ -15,6 +15,8 @@
 		A53E930D27CA19F500D4DE3C /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E930C27CA19F500D4DE3C /* ResultModel.swift */; };
 		A53E931127CA1AE100D4DE3C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E931027CA1AE100D4DE3C /* GradientButton.swift */; };
 		A53E931327CA1F5D00D4DE3C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E931227CA1F5D00D4DE3C /* Currency.swift */; };
+		A591519527CDE46A000FAC7B /* ConversionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591519427CDE46A000FAC7B /* ConversionManager.swift */; };
+		A591519927CDFD03000FAC7B /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591519827CDFD03000FAC7B /* AlertView.swift */; };
 		A5FC9B7827C9C3EE00A60226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC9B7727C9C3EE00A60226 /* AppDelegate.swift */; };
 		A5FC9B7A27C9C3EE00A60226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC9B7927C9C3EE00A60226 /* SceneDelegate.swift */; };
 		A5FC9B7C27C9C3EE00A60226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC9B7B27C9C3EE00A60226 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 		A53E930C27CA19F500D4DE3C /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		A53E931027CA1AE100D4DE3C /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		A53E931227CA1F5D00D4DE3C /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		A591519427CDE46A000FAC7B /* ConversionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionManager.swift; sourceTree = "<group>"; };
+		A591519827CDFD03000FAC7B /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		A5FC9B7427C9C3EE00A60226 /* Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FC9B7727C9C3EE00A60226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FC9B7927C9C3EE00A60226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			children = (
 				A50FF3BB27CCA3FB003522C4 /* BalanceStorage.swift */,
 				A50FF3BD27CCA959003522C4 /* Formatter.swift */,
+				A591519827CDFD03000FAC7B /* AlertView.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -118,6 +123,31 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		A591519227CDE432000FAC7B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC9B7B27C9C3EE00A60226 /* ViewController.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A591519327CDE452000FAC7B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A591519427CDE46A000FAC7B /* ConversionManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A591519A27CE0B4A000FAC7B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC9B7727C9C3EE00A60226 /* AppDelegate.swift */,
+				A5FC9B7927C9C3EE00A60226 /* SceneDelegate.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		A5FC9B6B27C9C3EE00A60226 = {
 			isa = PBXGroup;
 			children = (
@@ -139,11 +169,11 @@
 		A5FC9B7627C9C3EE00A60226 /* Converter */ = {
 			isa = PBXGroup;
 			children = (
-				A5FC9B7727C9C3EE00A60226 /* AppDelegate.swift */,
-				A5FC9B7927C9C3EE00A60226 /* SceneDelegate.swift */,
-				A5FC9B7B27C9C3EE00A60226 /* ViewController.swift */,
-				A53E930B27CA19E500D4DE3C /* Model */,
+				A591519A27CE0B4A000FAC7B /* Root */,
+				A591519227CDE432000FAC7B /* Presenter */,
 				A53E930E27CA1A2E00D4DE3C /* View */,
+				A591519327CDE452000FAC7B /* API */,
+				A53E930B27CA19E500D4DE3C /* Model */,
 				A5FC9B9327C9D0B700A60226 /* Enums */,
 				A50FF3BA27CCA3C4003522C4 /* System */,
 				A53E930A27CA072500D4DE3C /* Resources */,
@@ -301,12 +331,14 @@
 				A5FC9B7C27C9C3EE00A60226 /* ViewController.swift in Sources */,
 				A5FC9B9227C9D0B000A60226 /* Sections.swift in Sources */,
 				A5FC9B7827C9C3EE00A60226 /* AppDelegate.swift in Sources */,
+				A591519927CDFD03000FAC7B /* AlertView.swift in Sources */,
 				A5FC9B9027C9CC0C00A60226 /* Transaction.swift in Sources */,
 				A53E931127CA1AE100D4DE3C /* GradientButton.swift in Sources */,
 				A50FF3BC27CCA3FB003522C4 /* BalanceStorage.swift in Sources */,
 				A53E930D27CA19F500D4DE3C /* ResultModel.swift in Sources */,
 				A53E931327CA1F5D00D4DE3C /* Currency.swift in Sources */,
 				A5FC9B8C27C9CAEC00A60226 /* BalanceCell.swift in Sources */,
+				A591519527CDE46A000FAC7B /* ConversionManager.swift in Sources */,
 				A5FC9B7A27C9C3EE00A60226 /* SceneDelegate.swift in Sources */,
 				A5FC9B8E27C9CB2100A60226 /* ConversionCell.swift in Sources */,
 			);

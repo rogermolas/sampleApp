@@ -8,5 +8,5 @@
 import Foundation
 
 struct Currency {
-    static let supported = ["EUR", "USD", "JPY"]
+    static let supported = ["EUR", "USD", "JPY", "PHP", "TTT"]
 }
