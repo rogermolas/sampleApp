@@ -12,61 +12,71 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var submitButton: UIButton!
+    
+    var source: String {
+        get {
+            return BalanceStorage.shared.source
+        }
+        set(newValue) {
+            BalanceStorage.shared.source = newValue
+        }
+    }
+    
+    var destination: String {
+        get {
+            return BalanceStorage.shared.destination
+        }
+        set(newValue) {
+            BalanceStorage.shared.destination = newValue
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Navbar
-        let r = UIColor(named: "rightColor")?.cgColor
-        let l = UIColor(named: "leftColor")?.cgColor
-        let gradient = CAGradientLayer()
-        gradient.colors = [r as Any, l as Any]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-        gradient.frame = self.navigationController!.navigationBar.bounds
-        
-        let image = self.image(fromLayer: gradient)
+        self.title = "Currency Converter"
+        let image = GradientLayer().image(frame: self.navigationController!.navigationBar.bounds)
         if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
-            appearance.backgroundImage = self.image(fromLayer: gradient)
+            appearance.backgroundImage = image
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
             self.navigationController!.navigationBar.standardAppearance = appearance;
             self.navigationController!.navigationBar.scrollEdgeAppearance =  self.navigationController!.navigationBar.standardAppearance
         } else {
+            self.navigationController?.navigationBar.tintColor = UIColor.white
             self.navigationController!.navigationBar.setBackgroundImage(image, for: .default)
         }
         
         //Get initial amount conversion for the current source to destination
-        let source = BalanceStorage.shared.source
-        let destination = BalanceStorage.shared.destination
         let amount = BalanceStorage.shared.getBalance(forKey: source)
         self.convertRequest(amount: amount, source: source, destination: destination)
     }
     
-    // Generate image from Layer
-    func image(fromLayer layer: CALayer) -> UIImage {
-        UIGraphicsBeginImageContext(layer.frame.size)
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        let outputImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return outputImage!
-    }
-    
     //MARK: - Action
-    
     @IBAction func onSubmit(sender: UIButton) {
-        let action: callBack = {
-            
+        if BalanceStorage.shared.getBalance(forKey: source) <= 0 {
+            let message = "Does not have enough \(source) balance to cover transactions."
+            UIAlertController.init(title: "Insufficient fund", message: message, onDone: nil)
+                .show(owner: self, completion: nil)
+            return
         }
-        let source = BalanceStorage.shared.source
-        let destination = BalanceStorage.shared.destination
+
+        let action: callBack = {
+            // Update source and destination balance
+            BalanceStorage.shared.setBalance(amount: 0.0, forKey: self.source)
+            let convertedAmount = BalanceStorage.shared.getCoversion(forKey: self.destination)
+            BalanceStorage.shared.setBalance(amount: convertedAmount, forKey: self.destination)
+            self.tableView.reloadData()
+        }
         let souceBalance = BalanceStorage.shared.getBalance(forKey: source)
         let receiveBalance = BalanceStorage.shared.getCoversion(forKey: destination)
         let commission = 0.4
         
         let message = "You have converted \(souceBalance) \(source) to \(receiveBalance) \(destination). Commission Fee - \(commission) EUR"
-        UIAlertController.init(title: "Currency Converted", message: message, onDone: action)
-            .show(owner: self, completion: nil)
+        UIAlertController.init(title: "Currency Converted", message: message, onDone: nil)
+            .show(owner: self, completion: action)
     }
     
     //MARK: - API
@@ -123,7 +133,16 @@ extension ViewController: UITableViewDataSource {
         let section = Sections(rawValue: section)
         return section?.header
     }
+}
+
+//MARK: - UITableViewDelegate
+extension ViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = UIColor.gray
+        header.textLabel?.font = UIFont.systemFont(ofSize: 14)
+    }
 }
 
 //MARK: - ConversionCellDelegate
@@ -131,14 +150,12 @@ extension ViewController: ConversionCellDelegate {
     func didChangeCurrency(cell: ConversionCell, trans: Transaction, code: String) {
         if trans == .sell {
             BalanceStorage.shared.source = code
-            let destination = BalanceStorage.shared.destination
             let amount = BalanceStorage.shared.getBalance(forKey: code)
             self.convertRequest(amount: amount, source: code, destination: destination)
         }
         
         if trans == .recieve {
             BalanceStorage.shared.destination = code
-            let source = BalanceStorage.shared.source
             let amount = BalanceStorage.shared.getBalance(forKey: source)
             self.convertRequest(amount: amount, source: source, destination: code)
         }

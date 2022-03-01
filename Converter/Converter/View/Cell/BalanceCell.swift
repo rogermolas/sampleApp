@@ -22,8 +22,13 @@ class BalanceCell: UITableViewCell {
     }
     
     func layoutCell() {
-        let scroll = UIScrollView(frame: self.contentView.bounds)
-        self.addSubview(scroll)
+        // Clean up
+        if scrollView != nil {
+            scrollView?.removeFromSuperview()
+        }
+        
+        scrollView = UIScrollView(frame: self.contentView.bounds)
+        self.addSubview(scrollView!)
         let itemWidth = 150.0
         
         let currencies = Currency.supported
@@ -31,17 +36,17 @@ class BalanceCell: UITableViewCell {
             
             let item = BalanceItem.instantiate(owner: self)
             let origin_x = itemWidth * CGFloat(index)
-            let frame = CGRect(x: origin_x, y: 0, width: itemWidth, height: scroll.bounds.size.height)
+            let frame = CGRect(x: origin_x, y: 0, width: itemWidth, height: scrollView!.bounds.size.height)
             
             item.frame = frame
             
             let balance = BalanceStorage.shared.getBalance(forKey: element)
-            item.amountLabel.text = "\(balance)"
+            item.amountLabel.text = "\(balance.toCurrency())"
             item.codeLabel.text = element
            
-            scroll.addSubview(item)
-            scroll.sizeToFit()
-            scroll.contentSize.width = frame.width * CGFloat(index + 1)
+            scrollView!.addSubview(item)
+            scrollView!.sizeToFit()
+            scrollView!.contentSize.width = frame.width * CGFloat(index + 1)
         }
     }
 }

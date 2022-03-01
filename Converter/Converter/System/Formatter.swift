@@ -8,9 +8,12 @@
 import Foundation
 
 
-extension String {
+extension Double {
     
-    func toCurrency() {
-        
+    func toCurrency() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.positiveFormat = "#,##0.00"
+        return formatter.string(from: NSNumber(value: self)) ?? "\(self)"
     }
 }

@@ -15,7 +15,17 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kth-Bk-WDm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <navigationBarAppearance key="standardAppearance"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.098039215690000001" green="0.59607843140000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="Bz8-22-hH5" kind="relationship" relationship="rootViewController" id="sJW-1D-Pe5"/>
@@ -25,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-960" y="-487"/>
         </scene>
-        <!--Converter-->
+        <!--View Controller-->
         <scene sceneID="LKl-Bv-jvM">
             <objects>
-                <viewController title="Converter" id="Bz8-22-hH5" customClass="ViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bz8-22-hH5" customClass="ViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cC4-0Y-hcO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +175,9 @@
                             <constraint firstItem="Nrz-qi-CJz" firstAttribute="leading" secondItem="0WS-cR-wfK" secondAttribute="leading" constant="20" id="ee0-dg-8AT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Currency converter" id="RBA-YT-StV"/>
+                    <navigationItem key="navigationItem" id="RBA-YT-StV">
+                        <barButtonItem key="backBarButtonItem" title=" " id="HOj-LW-Gpc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="submitButton" destination="Nrz-qi-CJz" id="zN9-fr-VFM"/>
                         <outlet property="tableView" destination="lKH-Gd-Y4u" id="IXw-T6-ejo"/>
@@ -174,48 +186,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sf-SI-cOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-100.00000000000001" y="-485.49107142857139"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="uPg-AF-2MA">
-            <objects>
-                <viewController id="nVI-BD-nbw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v3l-Yb-mv7">
-                        <rect key="frame" x="0.0" y="0.0" width="130" height="60"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bw6-Q6-u0w">
-                                <rect key="frame" x="0.0" y="0.0" width="130" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4W-zT-szR">
-                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfV-zh-dcy">
-                                        <rect key="frame" x="67.5" y="0.0" width="62.5" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="7U1-PY-CHx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="7U1-PY-CHx" firstAttribute="bottom" secondItem="bw6-Q6-u0w" secondAttribute="bottom" id="DLd-mz-Y1q"/>
-                            <constraint firstItem="bw6-Q6-u0w" firstAttribute="leading" secondItem="v3l-Yb-mv7" secondAttribute="leading" id="bZO-Hw-jx8"/>
-                            <constraint firstAttribute="trailing" secondItem="bw6-Q6-u0w" secondAttribute="trailing" id="use-V1-Yf3"/>
-                            <constraint firstItem="bw6-Q6-u0w" firstAttribute="top" secondItem="v3l-Yb-mv7" secondAttribute="top" id="wFB-eO-oEE"/>
-                        </constraints>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="130" height="60"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6N-KQ-HyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="416" y="-669"/>
         </scene>
     </scenes>
     <designables>

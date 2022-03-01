@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,28 +15,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Kd-m2-1DA">
-                                <rect key="frame" x="154" y="318" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u3C-V1-hEh">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="regular"/>
-                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eurosign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jsd-GT-q9j">
+                                <rect key="frame" x="72" y="428.5" width="50" height="49"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="78m-4I-5b3"/>
+                                    <constraint firstAttribute="width" secondItem="Jsd-GT-q9j" secondAttribute="height" multiplier="1:1" id="lwh-Jt-Rg4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ps2-ia-HBM">
+                                <rect key="frame" x="252" y="444" width="20" height="17.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="jT0-r3-N2U"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-gh-IVP">
+                                <rect key="frame" x="182" y="428.5" width="50" height="49"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e9c-gh-IVP" secondAttribute="height" multiplier="1:1" id="sao-V8-Og4"/>
+                                    <constraint firstAttribute="width" constant="50" id="w4d-xc-jZE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yensign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="h1P-2s-74a">
+                                <rect key="frame" x="292" y="428.5" width="50" height="49"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="woU-w8-jHY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVX-9P-Rax">
+                                <rect key="frame" x="132" y="830" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H3Q-09-ghA">
+                                <rect key="frame" x="142" y="444" width="20" height="17.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Fft-Gn-Vld"/>
+                                    <constraint firstAttribute="width" secondItem="H3Q-09-ghA" secondAttribute="height" multiplier="50:51" id="nfO-B7-irj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.59999999999999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H3Q-09-ghA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3Vk-hz-bKU"/>
+                            <constraint firstItem="ps2-ia-HBM" firstAttribute="width" secondItem="ps2-ia-HBM" secondAttribute="height" multiplier="1:1" id="62G-Ey-rj1"/>
+                            <constraint firstItem="e9c-gh-IVP" firstAttribute="leading" secondItem="H3Q-09-ghA" secondAttribute="trailing" constant="20" id="C6G-4A-OB0"/>
+                            <constraint firstItem="e9c-gh-IVP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dff-h0-PGh"/>
+                            <constraint firstItem="h1P-2s-74a" firstAttribute="leading" secondItem="ps2-ia-HBM" secondAttribute="trailing" constant="20" id="LrK-wO-K0B"/>
+                            <constraint firstItem="ps2-ia-HBM" firstAttribute="leading" secondItem="e9c-gh-IVP" secondAttribute="trailing" constant="20" id="NzT-OL-8iL"/>
+                            <constraint firstItem="ps2-ia-HBM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Oko-4g-zxW"/>
+                            <constraint firstItem="e9c-gh-IVP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TYl-Xw-76o"/>
+                            <constraint firstItem="JVX-9P-Rax" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VJJ-dG-mau"/>
+                            <constraint firstItem="Jsd-GT-q9j" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="a2j-Uh-XWV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JVX-9P-Rax" secondAttribute="bottom" constant="11" id="aej-sZ-CVN"/>
+                            <constraint firstItem="H3Q-09-ghA" firstAttribute="leading" secondItem="Jsd-GT-q9j" secondAttribute="trailing" constant="20" id="ieT-U3-4nt"/>
+                            <constraint firstItem="h1P-2s-74a" firstAttribute="width" secondItem="h1P-2s-74a" secondAttribute="height" multiplier="1:1" id="klg-wn-tfZ"/>
+                            <constraint firstItem="h1P-2s-74a" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="soR-q6-wdK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="eurosign.circle" catalog="system" width="128" height="121"/>
+        <image name="yensign.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

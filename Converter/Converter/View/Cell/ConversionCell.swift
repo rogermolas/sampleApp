@@ -45,13 +45,15 @@ class ConversionCell: UITableViewCell {
         let storage = BalanceStorage.shared
         if trans == .sell {
             self.updateButtonState(code: storage.source)
-            self.amountField.text = "\(storage.getBalance(forKey: storage.source))"
+            let balance = storage.getBalance(forKey: storage.source)
+            self.amountField.text = "\(balance.toCurrency())"
             self.amountField.isEnabled = true
         }
         
         if trans == .recieve {
             self.updateButtonState(code: storage.destination)
-            self.amountField.text = "\(storage.getCoversion(forKey: storage.destination))"
+            let conversion = storage.getCoversion(forKey: storage.destination)
+            self.amountField.text = "\(conversion.toCurrency())"
             self.amountField.isEnabled = false
         }
     }
