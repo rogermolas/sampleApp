@@ -40,6 +40,9 @@ extension String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         let number = formatter.number(from: self)
-        return number!.doubleValue
+        if number != nil {
+            return number!.doubleValue
+        }
+        return 0.00
     }
 }

@@ -15,6 +15,7 @@ protocol ConversionCellDelegate {
                            trans:Transaction,
                            code: String,
                            amount: String)
+    func didEnterInvalidAmount(cell: ConversionCell)
 }
 
 class ConversionCell: UITableViewCell {
@@ -65,6 +66,7 @@ class ConversionCell: UITableViewCell {
                 let message = "Entered amount should not be greater than your \(storage.source) balance \(balance.toCurrency())"
                 UIAlertController(title: "Invalid Amount", message:message, onError: nil)
                     .show(owner: delegate as! UIViewController, completion: nil)
+                delegate!.didEnterInvalidAmount(cell: self)
             }
         }
     }
@@ -79,7 +81,7 @@ class ConversionCell: UITableViewCell {
         if trans == .sell {
             self.currentCode = storage.source
             self.updateButtonState(code: storage.source)
-            let balance = storage.getBalance(forKey: storage.source)
+            let balance = storage.getToCovert(forKey: storage.source)
             self.amountField.text = "\(balance.toCurrency())"
             self.amountField.isEnabled = true
         }

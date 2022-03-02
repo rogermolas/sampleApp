@@ -13,7 +13,8 @@ class BalanceStorage {
     
     struct Keys {
         static let source = "result.conversion.source"
-        static var destination_amount = "result.conversion.amount"
+        static var source_amount = "result.conversion.source.amount"
+        static var destination_amount = "result.conversion.destination.amount"
         static let destination = "result.conversion.destination"
     }
     
@@ -32,6 +33,16 @@ class BalanceStorage {
     // Call on submit
     func setBalance(amount:Double, forKey: String) {
         self.defaults.set(amount, forKey: forKey)
+    }
+    
+    func getToCovert(forKey: String) -> Double {
+        let amountKey = "\(Keys.source_amount).\(forKey)"
+        return self.defaults.double(forKey: amountKey)
+    }
+    
+    func setToCovert(amount:Double, forKey: String) {
+        let amountKey = "\(Keys.source_amount).\(forKey)"
+        self.defaults.set(amount, forKey: amountKey)
     }
     
     // API conversion results

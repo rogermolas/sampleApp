@@ -7,7 +7,6 @@
 
 import UIKit
 import ActionSheetPicker_3_0
-import MBProgressHUD
 
 class ViewController: UIViewController {
     
@@ -31,14 +30,14 @@ class ViewController: UIViewController {
             BalanceStorage.shared.destination = newValue
         }
     }
+    
+    let storage = BalanceStorage.shared
         
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
         self.tableView.addGestureRecognizer(tap)
         self.view.addGestureRecognizer(tap)
-        tableView.keyboardDismissMode = .interactive
-        tableView.keyboardDismissMode = .onDrag
 
         // Navbar
         self.title = "Currency Converter"
@@ -57,7 +56,9 @@ class ViewController: UIViewController {
         
         // Get initial amount conversion for the current source to destination
         // All amount available
-        let amount = BalanceStorage.shared.getBalance(forKey: source)
+        let amount = storage.getBalance(forKey: source)
+        storage.setToCovert(amount: amount, forKey: source)
+        self.amountToConvert = amount
         self.convertRequest(amount: amount, source: source, destination: destination)
     }
     
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
     @IBAction func onSubmit(sender: UIButton) {
         self.dismissKeyBoard()
 
-        if BalanceStorage.shared.getBalance(forKey: source) <= 0 {
+        if BalanceStorage.shared.getBalance(forKey: source) <= 0 || amountToConvert <= 0 {
             let message = "Does not have enough \(source) balance to cover transactions."
             UIAlertController.init(title: "Insufficient fund", message: message, onDone: nil)
                 .show(owner: self, completion: nil)
@@ -84,28 +85,66 @@ class ViewController: UIViewController {
             return
         }
         
-        // Assuming it was doing a sending API request to server
-        let hud = MBProgressHUD.showAdded(to: self.navigationController!.view, animated: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            hud.hide(animated: true)
-            let action: callBack = { [self] in
-                // Update source and destination balance
-                let total =  BalanceStorage.shared.getBalance(forKey: self.source)
-                let remainingAmount = total - amountToConvert
-                BalanceStorage.shared.setBalance(amount: remainingAmount, forKey: self.source)
-                let convertedAmount = BalanceStorage.shared.getCoversion(forKey: self.destination)
-                BalanceStorage.shared.setBalance(amount: convertedAmount, forKey: self.destination)
-                self.tableView.reloadData()
-            }
-            let souceBalance = BalanceStorage.shared.getBalance(forKey: self.source)
-            let receiveBalance = BalanceStorage.shared.getCoversion(forKey: self.destination)
-            let commission = 0.4
-            
-            let message = "You have converted \(souceBalance) \(self.source) to \(receiveBalance) \(self.destination). Commission Fee - \(commission) EUR"
-            UIAlertController.init(title: "Currency Converted", message: message, onDone: action)
-                .show(owner: self, completion: nil)
+        // Goto Summary
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let summary = storyBoard.instantiateViewController(
+            withIdentifier: "SummaryViewController") as? SummaryViewController
+        summary?.callBackAction = {
+            self.tableView.reloadData()
         }
+        self.navigationController?.pushViewController(summary!, animated: true)
+        
+        
+//
+//
+        
+//
+      
+//            let action: callBack = { [self] in
+//
+//                // Update source and destination balance
+//                let total =  BalanceStorage.shared.getBalance(forKey: self.source)
+//                let remainingAmount = total - amountToConvert
+//
+//                // calculate commision
+//                let commision = Commision(currency: self.source)
+//
+//                // Check if no remaining balance
+//                // Deduct the commision from amount converted
+//                if remainingAmount <= 0 {
+//
+//                }
+//
+//                var percentage = 0.00
+//
+//                if amountToConvert < 100.00 {
+//                    // stage 1 comission fee
+//                    percentage = commision.pecentage.0
+//                } else if (amountToConvert > 100.00 && amountToConvert <= 1000.00) {
+//                    // stage 2 comission fee
+//                    let percentage = commision.pecentage.1
+//                } else  {
+//                    // free for 1000 up
+//                    let fee = amountToConvert * 0.00
+//                }
+//
+//                var fee = amountToConvert * percentage
+
+//
+//
+//                BalanceStorage.shared.setBalance(amount: remainingAmount, forKey: self.source)
+//                let convertedAmount = BalanceStorage.shared.getCoversion(forKey: self.destination)
+//                BalanceStorage.shared.setBalance(amount: convertedAmount, forKey: self.destination)
+//                self.tableView.reloadData()
+//            }
+//            let souceBalance = BalanceStorage.shared.getBalance(forKey: self.source)
+//            let receiveBalance = BalanceStorage.shared.getCoversion(forKey: self.destination)
+//            let commission = 0.4
+//
+//            let message = "You have converted \(souceBalance) \(self.source) to \(receiveBalance) \(self.destination). Commission Fee - \(commission) EUR"
+//            UIAlertController.init(title: "Currency Converted", message: message, onDone: action)
+//                .show(owner: self, completion: nil)
+//        }
     }
     
     //MARK: - API
@@ -176,11 +215,25 @@ extension ViewController: UITableViewDelegate {
 
 //MARK: - ConversionCellDelegate
 extension ViewController: ConversionCellDelegate {
+    
+    func didEnterInvalidAmount(cell: ConversionCell) {
+        // If entered a max value then use all the remaining balance
+        let indexSet: IndexSet = [1]
+        self.tableView.reloadSections(indexSet, with: .none)
+    }
+    
     func didChangeCurrency(cell: ConversionCell, trans: Transaction, code: String, amount: String) {
         self.amountToConvert = amount.toDouble()
         if trans == .sell {
-            BalanceStorage.shared.source = code
-            self.convertRequest(amount: amount.toDouble(), source: code, destination: destination)
+            storage.source = code
+            let balance = storage.getBalance(forKey: source)
+            if amount.toDouble() > balance {
+                storage.setToCovert(amount: balance, forKey: code)
+                self.convertRequest(amount: balance, source: code, destination: destination)
+            } else {
+                storage.setToCovert(amount: amount.toDouble(), forKey: code)
+                self.convertRequest(amount: amount.toDouble(), source: code, destination: destination)
+            }
         }
         
         if trans == .recieve {
