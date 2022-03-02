@@ -34,23 +34,13 @@ class SummaryViewController: UIViewController {
         self.title = "Summary"
         
         //FROM
-        fromAmountLabel.text = "\(self.amountToConvert)"
+        fromAmountLabel.text = String(format:"%.2f", self.amountToConvert.toCurrency())
         fromCurrencyLabel.text = storage.source
         
-        // calculate commision
-        let commision = Commision(currency: storage.source)
-        var percentage = 0.00
-        if self.amountToConvert <= 100.00 {
-            // stage 1 comission fee
-            percentage = commision.pecentage.0
-        } else if (self.amountToConvert > 100.00 && self.amountToConvert <= 1000.00) {
-            // stage 2 comission fee
-            percentage = commision.pecentage.1
-        } else  {
-            // free for 1000 up
-        }
         // Fee
-        self.fee = round(amountToConvert * percentage)
+        // Fee if deducted to amount to be converted
+        let percentage = getPercentage(amount: self.amountToConvert)
+        self.fee = round(self.amountToConvert * percentage).round(to: 2)
         fromFeeLabel.text = "\(self.fee)"
         fromFeePercentLabel.text = "\(percentage)%"
         
@@ -59,19 +49,34 @@ class SummaryViewController: UIViewController {
         // Deduct the commision from amount to be converted
         let remainingAmount = (self.remaining - self.amountToConvert)
         if remainingAmount <= 0 {
-             newAmount = self.amountToConvert - self.fee
+            newAmount = self.amountToConvert - self.fee
+            fromAmountLabel.text = newAmount.toCurrency()
+            fromRemainingBalanceLabel.text = remainingAmount.toCurrency()
         } else {
-            // Deduct the commision from remaining balance wallet
             newAmount = self.remaining - self.amountToConvert - self.fee
+            // check if the commision can be deducted
+            if newAmount <= self.fee {
+                // otherwise deduct the amount in amount that to be converted
+                newAmount = self.amountToConvert - self.fee
+                fromAmountLabel.text = newAmount.toCurrency()
+                fromRemainingBalanceLabel.text = remainingAmount.toCurrency()
+            } else {
+                // Deduct the commision from remaining balance wallet
+                // Fee if deducted to remaining balance
+                let percentage = getPercentage(amount: self.remaining)
+                self.fee = round(self.remaining * percentage).round(to: 2)
+                newAmount = self.remaining - self.amountToConvert - self.fee
+                fromRemainingBalanceLabel.text = newAmount.toCurrency()
+            }
         }
-        fromRemainingBalanceLabel.text = "\(newAmount)"
         
         // TO
         let addedBalance = storage.getCoversion(forKey: storage.destination)
         let destinationBalance = storage.getBalance(forKey: storage.destination)
-        toAmountLabel.text = "\(addedBalance)"
+        toAmountLabel.text = addedBalance.toCurrency()
         toCurrencyLabel.text = storage.destination
-        toRemainingBalanceLabel.text = "\(destinationBalance + addedBalance)"
+        let destinationTotal = destinationBalance + addedBalance
+        toRemainingBalanceLabel.text = destinationTotal.toCurrency()
     }
     
     @IBAction func onContinue(sender: UIButton) {
@@ -86,28 +91,57 @@ class SummaryViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
             hud.hide(animated: true)
             
+            // Fee if deducted to amount to be converted
+            let percentage = getPercentage(amount: self.amountToConvert)
+            self.fee = round(self.amountToConvert * percentage).round(to: 2)
+            
             var newAmount = 0.00
             // Check if no remaining balance
             // Deduct the commision from amount to be converted
             let remainingAmount = (self.remaining - self.amountToConvert)
             if remainingAmount <= 0 {
-                newAmount = self.amountToConvert - self.fee
-                storage.setBalance(amount: newAmount, forKey: storage.source)
+                storage.setBalance(amount: remainingAmount, forKey: storage.source)
             } else {
                 // Deduct the commision from remaining balance wallet
                 newAmount = self.remaining - self.amountToConvert - self.fee
-                storage.setBalance(amount: newAmount, forKey: storage.source)
+                // check if the commision can be deducted
+                if newAmount < self.fee {
+                    // otherwise deduct the amount in amount that to be converted
+                    storage.setBalance(amount: remainingAmount, forKey: storage.source)
+                } else {
+                    // Fee if deducted to remaining balance
+                    let percentage = getPercentage(amount: self.remaining)
+                    self.fee = round(self.remaining * percentage).round(to: 2)
+                    newAmount = self.remaining - self.amountToConvert - self.fee
+                    storage.setBalance(amount: newAmount, forKey: storage.source)
+                }
             }
             
             // Coverted
-            let addedBalance = storage.getCoversion(forKey: storage.destination)
+            let convertedAmount = storage.getCoversion(forKey: storage.destination)
             let remainingBalance = storage.getBalance(forKey: storage.destination)
-            let convertedAmount = remainingBalance + addedBalance
-            storage.setBalance(amount: convertedAmount, forKey: storage.destination)
+            let newBalance = remainingBalance + convertedAmount
+            storage.setBalance(amount: newBalance, forKey: storage.destination)
             
-            let message = "You have converted \(self.amountToConvert) \(storage.source) to \(addedBalance) \(storage.destination). Commission Fee - \(self.fee) \(storage.source)"
+            let message = "You have converted \(self.amountToConvert.toCurrency()) \(storage.source) to \(convertedAmount.toCurrency()) \(storage.destination). Commission Fee - \(self.fee) \(storage.source)"
             UIAlertController.init(title: "Currency Converted", message: message, onDone: action)
                 .show(owner: self, completion: nil)
         }
+    }
+    
+    // calculate commision
+    func getPercentage(amount: Double) -> Double {
+        let commision = Commision(currency: storage.source)
+        var percentage = 0.00
+        if self.amountToConvert <= 100.00 {
+            // stage 1 comission fee
+            percentage = commision.pecentage.0
+        } else if (self.amountToConvert > 100.00 && self.amountToConvert <= 1000.00) {
+            // stage 2 comission fee
+            percentage = commision.pecentage.1
+        } else  {
+            // free for 1000 up
+        }
+        return percentage
     }
 }

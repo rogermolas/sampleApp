@@ -16,6 +16,11 @@ extension Double {
         formatter.positiveFormat = "#,##0.00"
         return formatter.string(from: NSNumber(value: self)) ?? "\(self)"
     }
+    
+    func round(to places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
 }
 
 

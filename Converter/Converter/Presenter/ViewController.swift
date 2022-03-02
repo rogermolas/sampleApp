@@ -71,7 +71,9 @@ class ViewController: UIViewController {
     @IBAction func onSubmit(sender: UIButton) {
         self.dismissKeyBoard()
 
-        if BalanceStorage.shared.getBalance(forKey: source) <= 0 || amountToConvert <= 0 {
+        let balance = storage.getBalance(forKey: source)
+        if balance <= 0 || amountToConvert <= 0 || balance < 3 {
+            tableView.reloadData()
             let message = "Does not have enough \(source) balance to cover transactions."
             UIAlertController.init(title: "Insufficient fund", message: message, onDone: nil)
                 .show(owner: self, completion: nil)
@@ -93,58 +95,6 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
         self.navigationController?.pushViewController(summary!, animated: true)
-        
-        
-//
-//
-        
-//
-      
-//            let action: callBack = { [self] in
-//
-//                // Update source and destination balance
-//                let total =  BalanceStorage.shared.getBalance(forKey: self.source)
-//                let remainingAmount = total - amountToConvert
-//
-//                // calculate commision
-//                let commision = Commision(currency: self.source)
-//
-//                // Check if no remaining balance
-//                // Deduct the commision from amount converted
-//                if remainingAmount <= 0 {
-//
-//                }
-//
-//                var percentage = 0.00
-//
-//                if amountToConvert < 100.00 {
-//                    // stage 1 comission fee
-//                    percentage = commision.pecentage.0
-//                } else if (amountToConvert > 100.00 && amountToConvert <= 1000.00) {
-//                    // stage 2 comission fee
-//                    let percentage = commision.pecentage.1
-//                } else  {
-//                    // free for 1000 up
-//                    let fee = amountToConvert * 0.00
-//                }
-//
-//                var fee = amountToConvert * percentage
-
-//
-//
-//                BalanceStorage.shared.setBalance(amount: remainingAmount, forKey: self.source)
-//                let convertedAmount = BalanceStorage.shared.getCoversion(forKey: self.destination)
-//                BalanceStorage.shared.setBalance(amount: convertedAmount, forKey: self.destination)
-//                self.tableView.reloadData()
-//            }
-//            let souceBalance = BalanceStorage.shared.getBalance(forKey: self.source)
-//            let receiveBalance = BalanceStorage.shared.getCoversion(forKey: self.destination)
-//            let commission = 0.4
-//
-//            let message = "You have converted \(souceBalance) \(self.source) to \(receiveBalance) \(self.destination). Commission Fee - \(commission) EUR"
-//            UIAlertController.init(title: "Currency Converted", message: message, onDone: action)
-//                .show(owner: self, completion: nil)
-//        }
     }
     
     //MARK: - API

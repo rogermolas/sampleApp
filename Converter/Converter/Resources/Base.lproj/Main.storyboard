@@ -350,6 +350,9 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onContinueWithSender:" destination="TRH-Fp-e35" eventType="touchUpInside" id="sr6-Ki-a1b"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Continue you agree to our Privacy Policy and Terms &amp; Condition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5F-7D-w6t">
                                 <rect key="frame" x="30" y="462" width="354" height="29"/>
