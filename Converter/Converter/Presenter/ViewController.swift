@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var submitButton: UIButton!
-    
+    var amountToConvert = 0.00
     var source: String {
         get {
             return BalanceStorage.shared.source
@@ -55,7 +55,8 @@ class ViewController: UIViewController {
             self.navigationController!.navigationBar.setBackgroundImage(image, for: .default)
         }
         
-        //Get initial amount conversion for the current source to destination
+        // Get initial amount conversion for the current source to destination
+        // All amount available
         let amount = BalanceStorage.shared.getBalance(forKey: source)
         self.convertRequest(amount: amount, source: source, destination: destination)
     }
@@ -88,9 +89,11 @@ class ViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             hud.hide(animated: true)
-            let action: callBack = {
+            let action: callBack = { [self] in
                 // Update source and destination balance
-                BalanceStorage.shared.setBalance(amount: 0.0, forKey: self.source)
+                let total =  BalanceStorage.shared.getBalance(forKey: self.source)
+                let remainingAmount = total - amountToConvert
+                BalanceStorage.shared.setBalance(amount: remainingAmount, forKey: self.source)
                 let convertedAmount = BalanceStorage.shared.getCoversion(forKey: self.destination)
                 BalanceStorage.shared.setBalance(amount: convertedAmount, forKey: self.destination)
                 self.tableView.reloadData()
@@ -173,17 +176,16 @@ extension ViewController: UITableViewDelegate {
 
 //MARK: - ConversionCellDelegate
 extension ViewController: ConversionCellDelegate {
-    func didChangeCurrency(cell: ConversionCell, trans: Transaction, code: String) {
+    func didChangeCurrency(cell: ConversionCell, trans: Transaction, code: String, amount: String) {
+        self.amountToConvert = amount.toDouble()
         if trans == .sell {
             BalanceStorage.shared.source = code
-            let amount = BalanceStorage.shared.getBalance(forKey: code)
-            self.convertRequest(amount: amount, source: code, destination: destination)
+            self.convertRequest(amount: amount.toDouble(), source: code, destination: destination)
         }
         
         if trans == .recieve {
             BalanceStorage.shared.destination = code
-            let amount = BalanceStorage.shared.getBalance(forKey: source)
-            self.convertRequest(amount: amount, source: source, destination: code)
+            self.convertRequest(amount: amount.toDouble(), source: source, destination: code)
         }
     }
 }

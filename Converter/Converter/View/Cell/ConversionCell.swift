@@ -11,7 +11,10 @@ import ActionSheetPicker_3_0
 import CurrencyText
 
 protocol ConversionCellDelegate {
-    func didChangeCurrency(cell: ConversionCell, trans:Transaction, code: String)
+    func didChangeCurrency(cell: ConversionCell,
+                           trans:Transaction,
+                           code: String,
+                           amount: String)
 }
 
 class ConversionCell: UITableViewCell {
@@ -21,6 +24,7 @@ class ConversionCell: UITableViewCell {
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var currencyButton: UIButton!
     
+    var currentCode: String!
     var delegate:ConversionCellDelegate? = nil
     var transactionType: Transaction = .sell
     var textFieldDelegate: CurrencyUITextFieldDelegate!
@@ -46,15 +50,14 @@ class ConversionCell: UITableViewCell {
             $0.alwaysShowsDecimalSeparator = true
             $0.showCurrencySymbol = false
         }
-
+        
         textFieldDelegate = CurrencyUITextFieldDelegate(formatter: currencyFormatter)
         textFieldDelegate.clearsWhenValueIsZero = true
+        textFieldDelegate.passthroughDelegate = self
         amountField.delegate = textFieldDelegate
-        amountField.addTarget(self, action: #selector(valueChange(_:)), for: .valueChanged)
     }
     
-    @objc func valueChange(_ textField: UITextField) {
-        
+    @objc func valueChange() {
         if transactionType == .sell && amountField.text != "" {
             let storage = BalanceStorage.shared
             let balance = storage.getBalance(forKey: storage.source)
@@ -74,6 +77,7 @@ class ConversionCell: UITableViewCell {
         
         let storage = BalanceStorage.shared
         if trans == .sell {
+            self.currentCode = storage.source
             self.updateButtonState(code: storage.source)
             let balance = storage.getBalance(forKey: storage.source)
             self.amountField.text = "\(balance.toCurrency())"
@@ -81,6 +85,7 @@ class ConversionCell: UITableViewCell {
         }
         
         if trans == .recieve {
+            self.currentCode = storage.source
             self.updateButtonState(code: storage.destination)
             let conversion = storage.getCoversion(forKey: storage.destination)
             self.amountField.text = "\(conversion.toCurrency())"
@@ -97,20 +102,43 @@ class ConversionCell: UITableViewCell {
     @IBAction func didChooseCurrency(sender: UIButton) {
         guard delegate != nil else { return }
         
+        self.endEditing(true)
         let options = Currency.supported
         ActionSheetStringPicker.show(
             withTitle: "Choose Currency", rows: options , initialSelection: 0,
             doneBlock: { picker, value, index in
                 let code = "\(index!)"
                 self.updateButtonState(code: code)
+                
+                let amount = self.amountField.text ?? "0.00"
                 self.delegate?.didChangeCurrency(cell: self,
                                                  trans: self.transactionType,
-                                                 code: code)
+                                                 code: code,
+                                                 amount: amount)
                 return
             },
             cancel: { picker in
                 return
             },
             origin: sender.superview?.superview)
+    }
+}
+
+//MARK: - UITextFieldDelegate
+extension ConversionCell: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn
+                   range: NSRange, replacementString string: String) -> Bool {
+        valueChange()
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        let amount = amountField.text ?? "0.00"
+        self.delegate?.didChangeCurrency(cell: self,
+                                         trans: self.transactionType,
+                                         code: currentCode,
+                                         amount: amount)
     }
 }
