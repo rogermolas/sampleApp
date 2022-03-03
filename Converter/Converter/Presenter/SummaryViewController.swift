@@ -34,7 +34,7 @@ class SummaryViewController: UIViewController {
         self.title = "Summary"
         
         //FROM
-        fromAmountLabel.text = String(format:"%.2f", self.amountToConvert.toCurrency())
+        fromAmountLabel.text = self.amountToConvert.toCurrency()
         fromCurrencyLabel.text = storage.source
         
         // Fee
@@ -82,6 +82,9 @@ class SummaryViewController: UIViewController {
     @IBAction func onContinue(sender: UIButton) {
         
         let action: callBack = { [self] in
+            storage.setToCovert(amount: 0.00, forKey: storage.source)
+            storage.setCoversion(amount: 0.00, forKey: storage.destination)
+            
             self.callBackAction!()
             self.navigationController?.popViewController(animated: true)
         }

@@ -173,22 +173,23 @@ extension ViewController: ConversionCellDelegate {
     }
     
     func didChangeCurrency(cell: ConversionCell, trans: Transaction, code: String, amount: String) {
-        self.amountToConvert = amount.toDouble()
         if trans == .sell {
             storage.source = code
             let balance = storage.getBalance(forKey: source)
             if amount.toDouble() > balance {
-                storage.setToCovert(amount: balance, forKey: code)
-                self.convertRequest(amount: balance, source: code, destination: destination)
+                self.amountToConvert = balance
+                storage.setToCovert(amount: amountToConvert, forKey: code)
+                self.convertRequest(amount: amountToConvert, source: code, destination: destination)
             } else {
-                storage.setToCovert(amount: amount.toDouble(), forKey: code)
-                self.convertRequest(amount: amount.toDouble(), source: code, destination: destination)
+                self.amountToConvert = amount.toDouble()
+                storage.setToCovert(amount: amountToConvert, forKey: code)
+                self.convertRequest(amount: amountToConvert, source: code, destination: destination)
             }
         }
         
         if trans == .recieve {
             BalanceStorage.shared.destination = code
-            self.convertRequest(amount: amount.toDouble(), source: source, destination: code)
+            self.convertRequest(amount: amountToConvert, source: source, destination: code)
         }
     }
 }

@@ -30,6 +30,8 @@ class ConversionCell: UITableViewCell {
     var transactionType: Transaction = .sell
     var textFieldDelegate: CurrencyUITextFieldDelegate!
     
+    let storage = BalanceStorage.shared
+    
     static func dequeueCell(_ tableView:UITableView, _ indexPath: IndexPath) -> ConversionCell? {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "ConversionCell", for: indexPath) as? ConversionCell else {
@@ -77,13 +79,14 @@ class ConversionCell: UITableViewCell {
         self.typeIcon.backgroundColor = trans.color
         self.typeIcon.setImage(trans.icon, for: .normal)
         
-        let storage = BalanceStorage.shared
         if trans == .sell {
             self.currentCode = storage.source
             self.updateButtonState(code: storage.source)
             let balance = storage.getToCovert(forKey: storage.source)
             self.amountField.text = "\(balance.toCurrency())"
             self.amountField.isEnabled = true
+            
+            print("Source : \(balance)")
         }
         
         if trans == .recieve {
@@ -92,6 +95,8 @@ class ConversionCell: UITableViewCell {
             let conversion = storage.getCoversion(forKey: storage.destination)
             self.amountField.text = "\(conversion.toCurrency())"
             self.amountField.isEnabled = false
+            
+            print("Conversion : \(conversion)")
         }
     }
     
@@ -99,6 +104,10 @@ class ConversionCell: UITableViewCell {
         let icon = UIImage(systemName: "chevron.down")!
         currencyButton.setImage(icon, for: .normal)
         currencyButton.setTitle("\(code) ", for: .normal)
+        
+        let balance = storage.getBalance(forKey: code)
+        amountField.text = balance.toCurrency()
+        
     }
     
     @IBAction func didChooseCurrency(sender: UIButton) {
@@ -111,7 +120,6 @@ class ConversionCell: UITableViewCell {
             doneBlock: { picker, value, index in
                 let code = "\(index!)"
                 self.updateButtonState(code: code)
-                
                 let amount = self.amountField.text ?? "0.00"
                 self.delegate?.didChangeCurrency(cell: self,
                                                  trans: self.transactionType,
